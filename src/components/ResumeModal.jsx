@@ -24,7 +24,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1b1b1b] border border-[#2a2a2a] text-white font-mono text-xs rounded-lg hover:border-[#f97316] transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1b1b1b] border border-[#2a2a2a] text-white font-mono text-xs rounded-lg hover:border-[var(--accent)] transition-all cursor-pointer"
             >
               <Printer size={14} />
               <span className="hidden sm:inline">Print / Save PDF</span>

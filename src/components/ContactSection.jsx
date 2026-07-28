@@ -28,7 +28,7 @@ export const ContactSection = () => {
             <h2 className="font-display font-black text-5xl sm:text-6xl text-white tracking-tight leading-none mb-1">
               LET'S
             </h2>
-            <h2 className="font-display font-black text-5xl sm:text-6xl text-[#f97316] tracking-tight leading-none">
+            <h2 className="font-display font-black text-5xl sm:text-6xl text-[var(--accent)] tracking-tight leading-none">
               TALK.
             </h2>
           </div>
@@ -41,7 +41,7 @@ export const ContactSection = () => {
           <div className="flex items-center gap-3 pt-4">
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="p-3 rounded-full bg-[#1b1b1b] border border-[#2a2a2a] text-[#c6c6c7] hover:text-white hover:border-[#f97316] hover:bg-[#f97316]/10 transition-all"
+              className="p-3 rounded-full bg-[#1b1b1b] border border-[#2a2a2a] text-[#c6c6c7] hover:text-white hover:border-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all"
               title="Send Email Direct"
             >
               <Mail size={18} />
@@ -50,7 +50,7 @@ export const ContactSection = () => {
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-[#1b1b1b] border border-[#2a2a2a] text-[#c6c6c7] hover:text-white hover:border-[#f97316] hover:bg-[#f97316]/10 transition-all"
+              className="p-3 rounded-full bg-[#1b1b1b] border border-[#2a2a2a] text-[#c6c6c7] hover:text-white hover:border-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all"
               title="GitHub Profile"
             >
               <Globe size={18} />
@@ -59,7 +59,7 @@ export const ContactSection = () => {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-[#1b1b1b] border border-[#2a2a2a] text-[#c6c6c7] hover:text-white hover:border-[#f97316] hover:bg-[#f97316]/10 transition-all"
+              className="p-3 rounded-full bg-[#1b1b1b] border border-[#2a2a2a] text-[#c6c6c7] hover:text-white hover:border-[var(--accent)] hover:bg-[var(--accent)]/10 transition-all"
               title="LinkedIn Profile"
             >
               <User size={18} />
@@ -101,7 +101,7 @@ export const ContactSection = () => {
                   placeholder="Enter your name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-[#1b1b1b] border border-[#2a2a2a] rounded-lg px-4 py-3 font-sans text-sm text-white placeholder-[#584237] focus:outline-none focus:border-[#f97316] transition-colors"
+                  className="w-full bg-[#1b1b1b] border border-[#2a2a2a] rounded-lg px-4 py-3 font-sans text-sm text-white placeholder-[#584237] focus:outline-none focus:border-[var(--accent)] transition-colors"
                 />
               </div>
 
@@ -116,7 +116,7 @@ export const ContactSection = () => {
                   placeholder="Enter your email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-[#1b1b1b] border border-[#2a2a2a] rounded-lg px-4 py-3 font-sans text-sm text-white placeholder-[#584237] focus:outline-none focus:border-[#f97316] transition-colors"
+                  className="w-full bg-[#1b1b1b] border border-[#2a2a2a] rounded-lg px-4 py-3 font-sans text-sm text-white placeholder-[#584237] focus:outline-none focus:border-[var(--accent)] transition-colors"
                 />
               </div>
 
@@ -131,7 +131,7 @@ export const ContactSection = () => {
                   placeholder="Tell me about your project"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-[#1b1b1b] border border-[#2a2a2a] rounded-lg px-4 py-3 font-sans text-sm text-white placeholder-[#584237] focus:outline-none focus:border-[#f97316] transition-colors resize-none"
+                  className="w-full bg-[#1b1b1b] border border-[#2a2a2a] rounded-lg px-4 py-3 font-sans text-sm text-white placeholder-[#584237] focus:outline-none focus:border-[var(--accent)] transition-colors resize-none"
                 ></textarea>
               </div>
 
@@ -139,7 +139,7 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3.5 bg-[#f97316] hover:bg-[#ff802b] text-white font-mono font-bold text-xs uppercase tracking-wider rounded-lg transition-all cursor-pointer shadow-lg active:scale-98 flex items-center justify-center gap-2"
+                className="w-full py-3.5 bg-[var(--accent)] hover:bg-[#ff802b] text-white font-mono font-bold text-xs uppercase tracking-wider rounded-lg transition-all cursor-pointer shadow-lg active:scale-98 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <span>SENDING INQUIRY...</span>

@@ -22,7 +22,7 @@ export const FooterSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 py-10 border-t border-[#262626]/50">
         {/* Navigation */}
         <div className="space-y-3">
-          <h4 className="font-mono text-xs uppercase tracking-wider text-[#f97316] font-bold">
+          <h4 className="font-mono text-xs uppercase tracking-wider text-[var(--accent)] font-bold">
             NAVIGATION
           </h4>
           <ul className="space-y-2 font-sans text-sm text-[#9a9b9b]">
@@ -51,7 +51,7 @@ export const FooterSection = () => {
 
         {/* Socials */}
         <div className="space-y-3">
-          <h4 className="font-mono text-xs uppercase tracking-wider text-[#f97316] font-bold">
+          <h4 className="font-mono text-xs uppercase tracking-wider text-[var(--accent)] font-bold">
             SOCIALS
           </h4>
           <ul className="space-y-2 font-sans text-sm text-[#9a9b9b]">
@@ -85,7 +85,7 @@ export const FooterSection = () => {
 
         {/* Location */}
         <div className="space-y-3">
-          <h4 className="font-mono text-xs uppercase tracking-wider text-[#f97316] font-bold">
+          <h4 className="font-mono text-xs uppercase tracking-wider text-[var(--accent)] font-bold">
             LOCATION
           </h4>
           <div className="space-y-3 font-sans text-sm text-[#9a9b9b]">

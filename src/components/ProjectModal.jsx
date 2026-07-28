@@ -75,7 +75,7 @@ export const ProjectModal = ({ project, onClose }) => {
 
           <button
             onClick={onClose}
-            className="p-2 rounded-lg bg-[#1b1b1b] border border-[#2a2a2a] text-[#c6c6c7] hover:text-white hover:border-[#f97316] transition-all cursor-pointer"
+            className="p-2 rounded-lg bg-[#1b1b1b] border border-[#2a2a2a] text-[#c6c6c7] hover:text-white hover:border-[var(--accent)] transition-all cursor-pointer"
           >
             <X size={20} />
           </button>
@@ -98,7 +98,7 @@ export const ProjectModal = ({ project, onClose }) => {
             <button
               onClick={() => setActiveTab('overview')}
               className={`px-4 py-2 font-mono text-xs rounded-lg transition-all cursor-pointer ${
-                activeTab === 'overview' ? 'bg-[#f97316] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
+                activeTab === 'overview' ? 'bg-[var(--accent)] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
               }`}
             >
               OVERVIEW
@@ -106,7 +106,7 @@ export const ProjectModal = ({ project, onClose }) => {
             <button
               onClick={() => setActiveTab('architecture')}
               className={`px-4 py-2 font-mono text-xs rounded-lg transition-all cursor-pointer ${
-                activeTab === 'architecture' ? 'bg-[#f97316] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
+                activeTab === 'architecture' ? 'bg-[var(--accent)] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
               }`}
             >
               ARCHITECTURE SPECS
@@ -114,7 +114,7 @@ export const ProjectModal = ({ project, onClose }) => {
             <button
               onClick={() => setActiveTab('simulator')}
               className={`px-4 py-2 font-mono text-xs rounded-lg transition-all cursor-pointer ${
-                activeTab === 'simulator' ? 'bg-[#f97316] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
+                activeTab === 'simulator' ? 'bg-[var(--accent)] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
               }`}
             >
               API SIMULATOR
@@ -199,9 +199,9 @@ export const ProjectModal = ({ project, onClose }) => {
                   <button
                     key={idx}
                     onClick={() => runSimulation(ep)}
-                    className="flex items-center gap-2 px-3 py-2 bg-[#1b1b1b] border border-[#2a2a2a] hover:border-[#f97316] text-white font-mono text-xs rounded-lg transition-all cursor-pointer"
+                    className="flex items-center gap-2 px-3 py-2 bg-[#1b1b1b] border border-[#2a2a2a] hover:border-[var(--accent)] text-white font-mono text-xs rounded-lg transition-all cursor-pointer"
                   >
-                    <Play size={12} className="text-[#f97316]" />
+                    <Play size={12} className="text-[var(--accent)]" />
                     <span>{ep.split(' - ')[0]}</span>
                   </button>
                 ))}
@@ -210,12 +210,12 @@ export const ProjectModal = ({ project, onClose }) => {
               {/* Console Output */}
               <div className="p-4 bg-[#0a0a0a] border border-[#262626] rounded-xl font-mono text-xs min-h-[160px] flex flex-col justify-between">
                 <div className="flex items-center gap-2 text-[#9a9b9b] pb-2 border-b border-[#1f1f1f] mb-3">
-                  <Terminal size={14} className="text-[#f97316]" />
+                  <Terminal size={14} className="text-[var(--accent)]" />
                   <span>API Response Payload Simulator</span>
                 </div>
 
                 {simState.loading ? (
-                  <div className="text-[#f97316] animate-pulse py-6 text-center">
+                  <div className="text-[var(--accent)] animate-pulse py-6 text-center">
                     Executing .NET Web API pipeline & Redis transaction...
                   </div>
                   ) : simState.output ? (
@@ -240,7 +240,7 @@ export const ProjectModal = ({ project, onClose }) => {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-[#1b1b1b] border border-[#2a2a2a] text-white font-mono text-xs rounded-lg hover:border-[#f97316] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-[#1b1b1b] border border-[#2a2a2a] text-white font-mono text-xs rounded-lg hover:border-[var(--accent)] transition-all"
               >
                 <Github size={14} />
                 <span>GitHub Repository</span>
@@ -251,7 +251,7 @@ export const ProjectModal = ({ project, onClose }) => {
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-[#f97316] text-black font-mono font-bold text-xs rounded-lg hover:bg-[#ff802b] transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-[var(--accent)] text-black font-mono font-bold text-xs rounded-lg hover:bg-[#ff802b] transition-all"
               >
                 <ExternalLink size={14} />
                 <span>Live Demo</span>

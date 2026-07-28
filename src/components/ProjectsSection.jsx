@@ -76,7 +76,7 @@ export const ProjectsSection = () => {
                   <div className="pt-2">
                     <button
                       onClick={() => setSelectedProject(project)}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1b1b1b] border border-[#2a2a2a] hover:border-[#f97316] text-white font-mono text-xs font-bold rounded-xl hover:bg-[#222222] hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-200 cursor-pointer group active:scale-95"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1b1b1b] border border-[#2a2a2a] hover:border-[var(--accent)] text-white font-mono text-xs font-bold rounded-xl hover:bg-[#222222] hover:shadow-[0_0_15px_rgba(var(--accent-rgba),0.2)] transition-all duration-200 cursor-pointer group active:scale-95"
                     >
                       <span>INSPECT ARCHITECTURE & DEMO</span>
                       <ArrowUpRight size={16} style={{ color: 'var(--accent)' }} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -89,7 +89,7 @@ export const ProjectsSection = () => {
                   className={`lg:col-span-6 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
                   onClick={() => setSelectedProject(project)}
                 >
-                  <div className="w-full aspect-[16/10] bg-[#121212] border border-[#262626] rounded-2xl overflow-hidden relative group cursor-pointer hover:border-[#f97316] transition-all duration-300 shadow-xl hover:shadow-2xl">
+                  <div className="w-full aspect-[16/10] bg-[#121212] border border-[#262626] rounded-2xl overflow-hidden relative group cursor-pointer hover:border-[var(--accent)] transition-all duration-300 shadow-xl hover:shadow-2xl">
                     <img
                       src={project.image}
                       alt={project.title}
