@@ -3,52 +3,58 @@ import React, { useState } from 'react';
 export const TechStackSection = () => {
   const row1 = [
     {
-      name: '.NET',
+      name: '.NET C#',
       accent: '#512BD4',
       icon: (
-        <svg viewBox="0 0 100 100" className="w-10 h-10 sm:w-12 sm:h-12">
-          <circle cx="50" cy="50" r="46" fill="#512BD4" />
-          <text x="50" y="58" textAnchor="middle" fill="#FFFFFF" fontSize="28" fontWeight="900" fontFamily="sans-serif">.NET</text>
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.5"/>
+          <text x="50" y="40" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="900" fontFamily="sans-serif">.NET</text>
+          <text x="50" y="68" textAnchor="middle" fill="currentColor" fontSize="22" fontWeight="700" fontFamily="sans-serif">C#</text>
         </svg>
       ),
     },
     {
-      name: 'Python',
-      accent: '#3776AB',
+      name: 'JavaScript',
+      accent: '#F7DF1E',
       icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11">
-          <path fill="#3776AB" d="M11.87 2c-3.83 0-4.45 1.65-4.45 3.3v1.65h8.9V5.3c0-1.65-.62-3.3-4.45-3.3zm-2.22 2.23a.74.74 0 1 1 0 1.48.74.74 0 0 1 0-1.48zM7.42 8C5.77 8 4.12 8.62 4.12 12.46c0 3.83.65 4.45 2.3 4.45h1.49v-2.23c0-1.65 1.32-2.97 2.97-2.97h3.46c1.65 0 2.97-1.32 2.97-2.97V7.42H7.42z" />
-          <path fill="#FFD43B" d="M19.6 11.91c0-3.83-.65-4.45-2.3-4.45h-1.49v2.23c0 1.65-1.32 2.97-2.97 2.97H9.38c-1.65 0-2.97 1.32-2.97 2.97v1.24h9.89c1.65 0 2.3-.62 2.3-4.46zm-5.52 5.69a.74.74 0 1 1 0 1.48.74.74 0 0 1 0-1.48zM11.87 22c3.83 0 4.45-1.65 4.45-3.3v-1.65h-8.9V18.7c0 1.65.62 3.3 4.45 3.3z" />
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <rect x="4" y="4" width="92" height="92" rx="12" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.5"/>
+          <text x="52" y="72" textAnchor="middle" fill="currentColor" fontSize="52" fontWeight="900" fontFamily="monospace">JS</text>
         </svg>
       ),
     },
     {
-      name: 'Go',
-      accent: '#00ADD8',
+      name: 'ASP.NET Core',
+      accent: '#512BD4',
       icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11">
-          <path fill="#00ADD8" d="M1.81 10.3c.12-.4.32-.77.58-1.1.48-.61 1.22-.98 2.03-.98 1.48 0 2.68 1.2 2.68 2.68s-1.2 2.68-2.68 2.68c-.81 0-1.55-.37-2.03-.98-.26-.33-.46-.7-.58-1.1h3.33v-1.2H1.81zm7.42-2.1c1.88 0 3.4 1.52 3.4 3.4s-1.52 3.4-3.4 3.4-3.4-1.52-3.4-3.4 1.52-3.4 3.4-3.4zm0 1.4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm7.48-1.4h4.8v1.4h-3.4v1.1h2.9v1.3h-2.9v1.8h-1.4V8.2z" />
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.5"/>
+          <text x="50" y="36" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="800" fontFamily="sans-serif">ASP</text>
+          <text x="50" y="55" textAnchor="middle" fill="currentColor" fontSize="15" fontWeight="800" fontFamily="sans-serif">.NET</text>
+          <text x="50" y="74" textAnchor="middle" fill="currentColor" fontSize="13" fontWeight="600" fontFamily="sans-serif" opacity="0.7">Core</text>
         </svg>
       ),
     },
     {
-      name: 'Node.js',
-      accent: '#339933',
+      name: 'EF Core',
+      accent: '#68217A',
       icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11">
-          <path fill="#339933" d="M12 1.5l10 5.77v11.46L12 22.5l-10-5.77V7.27L12 1.5zm0 2.3L4 8.16v7.68l8 4.62 8-4.62V8.16L12 3.8zm0 3.2a1.5 1.5 0 0 1 1.5 1.5v3.5a1.5 1.5 0 0 1-3 0v-3.5A1.5 1.5 0 0 1 12 7zm0 8a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.5"/>
+          <text x="50" y="44" textAnchor="middle" fill="currentColor" fontSize="28" fontWeight="900" fontFamily="sans-serif">EF</text>
+          <text x="50" y="70" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600" fontFamily="sans-serif" opacity="0.7">Core</text>
         </svg>
       ),
     },
     {
-      name: 'ReactJs',
+      name: 'ReactJS',
       accent: '#61DAFB',
       icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11" fill="none">
-          <circle cx="12" cy="12" r="2.5" fill="#61DAFB" />
-          <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" strokeWidth="1.6" />
-          <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" strokeWidth="1.6" transform="rotate(60 12 12)" />
-          <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" strokeWidth="1.6" transform="rotate(120 12 12)" />
+        <svg viewBox="0 0 24 24" className="w-10 h-10 sm:w-12 sm:h-12" fill="none">
+          <circle cx="12" cy="12" r="2.2" fill="currentColor" />
+          <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="currentColor" strokeWidth="1.2" />
+          <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="currentColor" strokeWidth="1.2" transform="rotate(60 12 12)" />
+          <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="currentColor" strokeWidth="1.2" transform="rotate(120 12 12)" />
         </svg>
       ),
     },
@@ -56,24 +62,14 @@ export const TechStackSection = () => {
 
   const row2 = [
     {
-      name: 'PostgreSQL',
-      accent: '#4169E1',
+      name: 'SQL Server',
+      accent: '#CC2927',
       icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11" fill="none" stroke="#4169E1" strokeWidth="1.8">
-          <path d="M12 2C8 2 4.5 4.5 4.5 8.5c0 3.2 2.2 5.8 5.2 6.6V18c0 1.5 1.5 2.5 3 2.5s2.5-1 2.5-2.5v-1.5c2.8-.5 4.8-3 4.8-6 0-4-3.5-6.5-8-6.5z" />
-          <path d="M8.5 8.5c0-1 1-1.5 2-1.5s2 .5 2 1.5" />
-          <circle cx="8" cy="7.5" r="1" fill="#4169E1" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Elastic Search',
-      accent: '#23A8F2',
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11">
-          <circle cx="8" cy="8" r="3.5" fill="#FED100" />
-          <circle cx="16" cy="8" r="3.5" fill="#005571" />
-          <circle cx="12" cy="15" r="4.5" fill="#23A8F2" />
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <ellipse cx="50" cy="30" rx="30" ry="12" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.5"/>
+          <path d="M20 30 L20 70 C20 77 33 84 50 84 C67 84 80 77 80 70 L80 30" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.5"/>
+          <ellipse cx="50" cy="50" rx="30" ry="12" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.3"/>
+          <ellipse cx="50" cy="70" rx="30" ry="12" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.3"/>
         </svg>
       ),
     },
@@ -81,9 +77,10 @@ export const TechStackSection = () => {
       name: 'MongoDB',
       accent: '#13AA52',
       icon: (
-        <svg viewBox="0 0 100 100" className="w-10 h-10 sm:w-12 sm:h-12">
-          <circle cx="50" cy="50" r="46" fill="#13AA52" />
-          <path fill="#FFFFFF" d="M50 18s-18 16.5-18 33c0 9.9 8.1 18 18 18s18-8.1 18-18c0-16.5-18-33-18-33zm2.4 53.1v8.4h-4.8v-8.4c-6.9-1.2-12-7.2-12-14.1 0-7.8 6.6-14.4 14.4-14.4s14.4 6.6 14.4 14.4c0 6.9-5.1 12.9-12 14.1z" />
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <path d="M50 12 C50 12, 30 34, 30 54 C30 68 38.9 78 50 78 C61.1 78 70 68 70 54 C70 34 50 12 50 12Z" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.6"/>
+          <line x1="50" y1="42" x2="50" y2="88" stroke="currentColor" strokeWidth="3" opacity="0.4"/>
+          <circle cx="50" cy="54" r="6" fill="currentColor" opacity="0.3"/>
         </svg>
       ),
     },
@@ -91,8 +88,20 @@ export const TechStackSection = () => {
       name: 'Redis',
       accent: '#DC382D',
       icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11">
-          <path fill="#DC382D" d="M3 6l9-4 9 4-9 4-9-4zm0 6l9 4 9-4-9-4-9 4zm0 6l9 4 9-4-9-4-9 4z" />
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <path d="M20 38 L50 24 L80 38 L50 52 Z" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.6"/>
+          <path d="M20 52 L50 66 L80 52" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.45"/>
+          <path d="M20 66 L50 80 L80 66" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.3"/>
+        </svg>
+      ),
+    },
+    {
+      name: 'Node.js',
+      accent: '#339933',
+      icon: (
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <path d="M50 14 L82 32 L82 68 L50 86 L18 68 L18 32 Z" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.5"/>
+          <text x="50" y="60" textAnchor="middle" fill="currentColor" fontSize="28" fontWeight="900" fontFamily="sans-serif">N</text>
         </svg>
       ),
     },
@@ -100,29 +109,40 @@ export const TechStackSection = () => {
 
   const row3 = [
     {
-      name: 'RabbitMQ',
-      accent: '#FF6600',
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11">
-          <path fill="#FF6600" d="M4 8h16v12H4V8zm3 3v6h10v-6H7zm-3-6h5v2H4V5zm11 0h5v2h-5V5z" />
-        </svg>
-      ),
-    },
-    {
       name: 'Docker',
       accent: '#2496ED',
       icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11">
-          <path fill="#2496ED" d="M13 8h2v2h-2V8zm-3 0h2v2h-2V8zm-3 0h2v2H7V8zm9 0h2v2h-2V8zm-6-3h2v2h-2V5zm-3 0h2v2H7V5zm6 0h2v2h-2V5zm0 6h2v2h-2v-2zm-3 0h2v2h-2v-2zm-3 0h2v2H7v-2zm-3 0h2v2H4v-2zm-.5 4.5c.3 3.5 3.2 6.5 7.5 6.5 4.8 0 8.5-3 9.5-7.5.5.2 1.5.5 2.5 0 .2-.1.5-.5.2-.8-.8-.8-2-1.2-2.7-1.2h-17c-.5 0-1 .2-1.3.6C1 12.5 1 14 2.5 15.5z" />
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <rect x="18" y="46" width="12" height="10" rx="2" fill="currentColor" opacity="0.5"/>
+          <rect x="33" y="46" width="12" height="10" rx="2" fill="currentColor" opacity="0.5"/>
+          <rect x="48" y="46" width="12" height="10" rx="2" fill="currentColor" opacity="0.5"/>
+          <rect x="33" y="34" width="12" height="10" rx="2" fill="currentColor" opacity="0.5"/>
+          <rect x="48" y="34" width="12" height="10" rx="2" fill="currentColor" opacity="0.5"/>
+          <rect x="48" y="22" width="12" height="10" rx="2" fill="currentColor" opacity="0.5"/>
+          <path d="M64 50 C70 46 80 47 84 52 C81 60 74 62 67 59 C64 57 63 54 64 50Z" fill="currentColor" opacity="0.35"/>
+          <path d="M10 62 C10 62 20 72 50 72 C80 72 90 58 90 58" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.2"/>
         </svg>
       ),
     },
     {
-      name: 'Azure',
-      accent: '#0078D4',
+      name: 'Git',
+      accent: '#F05032',
       icon: (
-        <svg viewBox="0 0 24 24" className="w-9 h-9 sm:w-11 sm:h-11">
-          <path fill="#0078D4" d="M5.5 19L13 3l5.5 11H12.5L5.5 19zm8.5 0l4.5-9h-3.5L11 19h3z" />
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <path d="M80 46.5 L53.5 20 C51.5 18 48.5 18 46.5 20 L40.5 26 L48 33.5 C50.5 32.5 53.5 33 55 34.5 C56.5 36 57 39 56 41.5 L63 48.5 C65.5 47.5 68.5 48 70 50 C72 52.5 71.5 56 69 57.8 C66.5 59.6 63 59 61 56.5 C59.5 54.5 59.5 52 60.5 50.2 L54 44 L54 62 C55 62.5 55.8 63.3 56.3 64.2 C58.3 67 57.5 70.5 55 72.3 C52.5 74.1 49 73.5 47 71 C45 68.5 45.5 65 48 63.2 C48.8 62.6 49.8 62.2 50.8 62 L50.8 43.5 C49.8 43.2 48.8 42.6 48 41.8 C46.5 40.3 46 38 46.8 36 L40 29.5 L20 49.5 C18 51.5 18 54.5 20 56.5 L46.5 83 C48.5 85 51.5 85 53.5 83 L80 56.5 C82 54.5 82 51.5 80 49.5Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+      ),
+    },
+    {
+      name: 'Postman',
+      accent: '#FF6C37',
+      icon: (
+        <svg viewBox="0 0 100 100" className="w-11 h-11 sm:w-13 sm:h-13">
+          <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.4"/>
+          <path d="M35 65 L65 35" stroke="currentColor" strokeWidth="4" strokeLinecap="round" opacity="0.6"/>
+          <path d="M65 35 L55 38 L62 45 Z" fill="currentColor" opacity="0.6"/>
+          <path d="M35 65 L38 55" stroke="currentColor" strokeWidth="3" strokeLinecap="round" opacity="0.4"/>
+          <circle cx="50" cy="50" r="5" fill="currentColor" opacity="0.25"/>
         </svg>
       ),
     },
@@ -145,36 +165,47 @@ export const TechStackSection = () => {
     const isHovered = hovered === id;
 
     const defaultStyle = {
-      background: 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(10,11,14,0.55) 100%)',
-      borderColor: '#2d2e38',
-      boxShadow: '0 12px 32px rgba(0,0,0,0.55)'
+      background: 'rgba(255, 255, 255, 0.04)',
+      border: '1px solid rgba(255, 255, 255, 0.10)',
+      boxShadow: 'inset 0 1px 1px rgba(255, 255, 255, 0.08), 0 4px 24px rgba(0, 0, 0, 0.4)',
+      color: 'rgba(255, 255, 255, 0.45)',
     };
 
     const hoverStyle = {
-      background: `linear-gradient(180deg, ${hexToRgba(accent, 0.12)} 0%, rgba(10,11,14,0.55) 100%)`,
-      borderColor: hexToRgba(accent, 0.22),
-      boxShadow: `0 12px 32px ${hexToRgba(accent, 0.12)}`
+      background: `linear-gradient(180deg, ${hexToRgba(accent, 0.10)} 0%, rgba(255, 255, 255, 0.06) 100%)`,
+      border: `1px solid ${hexToRgba(accent, 0.25)}`,
+      boxShadow: `inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 0 24px ${hexToRgba(accent, 0.10)}, 0 8px 32px rgba(0, 0, 0, 0.4)`,
+      color: accent,
+      transform: 'scale(1.05) translateY(-2px)',
     };
 
     const cardStyle = isHovered ? hoverStyle : defaultStyle;
-    const iconStyle = {
-      filter: isHovered ? 'none' : 'grayscale(1) opacity(0.28) contrast(75%)',
-      transform: isHovered ? 'scale(1.08)' : 'scale(1)',
-      transition: 'all 220ms ease'
-    };
 
     return (
       <div
         key={id}
         onMouseEnter={() => setHovered(id)}
         onMouseLeave={() => setHovered(null)}
-        style={cardStyle}
-        className="group w-28 h-28 sm:w-[120px] sm:h-[120px] backdrop-blur-md rounded-2xl sm:rounded-[22px] p-3 sm:p-4 flex flex-col items-center justify-center gap-2 sm:gap-3 cursor-pointer hover:-translate-y-1 transition-all duration-300 select-none"
+        style={{
+          ...cardStyle,
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
+          transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
+        className="group relative w-[95px] h-[95px] sm:w-[110px] sm:h-[110px] rounded-2xl flex flex-col items-center justify-center gap-2 cursor-pointer select-none"
       >
-        <div style={iconStyle} className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12">
+        {/* Icon */}
+        <div className="flex items-center justify-center w-11 h-11 sm:w-13 sm:h-13">
           {tech.icon}
         </div>
-        <span className="font-sans font-bold text-xs sm:text-sm text-center tracking-tight text-[#c2c4c9] group-hover:text-white transition-colors duration-200">
+        {/* Label */}
+        <span
+          style={{
+            color: isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.50)',
+            transition: 'color 300ms ease',
+          }}
+          className="font-sans font-medium text-[10px] sm:text-[11px] text-center tracking-wide leading-tight"
+        >
           {tech.name}
         </span>
       </div>
@@ -191,17 +222,17 @@ export const TechStackSection = () => {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.06) 45%, transparent 80%)',
+            'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 45%, transparent 80%)',
         }}
       />
 
       {/* Perspective Grid Background Lines */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-40"
+        className="absolute inset-0 pointer-events-none opacity-30"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px)
+            linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
           `,
           backgroundSize: '52px 52px',
           transform: 'perspective(600px) rotateX(16deg) scale(1.25)',
@@ -210,29 +241,29 @@ export const TechStackSection = () => {
       />
 
       {/* Title & Description Header */}
-      <div className="relative z-10 text-center max-w-2xl mx-auto mb-12">
+      <div className="relative z-10 text-center max-w-2xl mx-auto mb-14">
         <h2 className="font-hero font-extrabold text-4xl sm:text-5xl text-white tracking-tight mb-3">
           Tech Stack
         </h2>
-        <p className="font-sans text-sm sm:text-base text-[#8e8f9a] leading-relaxed">
-          A list of core technologies I use to build reliable and optimized systems.
+        <p className="font-sans text-sm sm:text-base text-[#6b6c78] leading-relaxed">
+          Core technologies I use to build reliable and optimized systems.
         </p>
       </div>
 
       {/* Pyramid / Staggered Grid Rows (5 - 4 - 3) */}
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center gap-3 sm:gap-4">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center gap-3">
         {/* Row 1: 5 Items */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="flex flex-wrap justify-center gap-3">
           {row1.map((tech, idx) => renderCard(tech, `r1-${idx}`))}
         </div>
 
         {/* Row 2: 4 Items */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="flex flex-wrap justify-center gap-3">
           {row2.map((tech, idx) => renderCard(tech, `r2-${idx}`))}
         </div>
 
         {/* Row 3: 3 Items */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="flex flex-wrap justify-center gap-3">
           {row3.map((tech, idx) => renderCard(tech, `r3-${idx}`))}
         </div>
       </div>
