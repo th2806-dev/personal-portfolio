@@ -71,7 +71,10 @@ export const ContactSection = () => {
         <div className="lg:col-span-7 bg-[#121212] border border-[#262626] rounded-2xl p-6 sm:p-8 hover:border-[#353535] transition-all">
           {submitted ? (
             <div className="py-12 text-center space-y-4">
-              <div className="w-12 h-12 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] flex items-center justify-center mx-auto">
+              <div
+                className="w-12 h-12 rounded-full flex items-center justify-center mx-auto"
+                style={{ background: 'rgba(var(--accent-rgba),0.10)', border: '1px solid rgba(var(--accent-rgba),0.30)', color: 'var(--accent)' }}
+              >
                 <CheckCircle size={24} />
               </div>
               <h3 className="font-display font-bold text-2xl text-white">Inquiry Received!</h3>

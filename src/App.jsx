@@ -62,7 +62,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0e0e0e] text-[#e2e2e2] font-sans relative selection:bg-[#f97316] selection:text-black">
+    <div className="min-h-screen bg-[#0e0e0e] text-[#e2e2e2] font-sans relative">
       {/* Top Header */}
       <Header
         onOpenResume={() => {
@@ -96,10 +96,10 @@ export default function App() {
 
       {/* Toast Notification */}
       {highlightToast && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#1f1f1f] border border-[#f97316] text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 animate-fade-in font-mono text-xs">
-          <Sparkles className="text-[#f97316]" size={16} />
+        <div style={{ border: '1px solid var(--accent)' }} className="fixed bottom-6 right-6 z-50 bg-[#1f1f1f] text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 animate-fade-in font-mono text-xs">
+          <Sparkles size={16} style={{ color: 'var(--accent)' }} />
           <span>{highlightToast}</span>
-          <CheckCircle2 className="text-[#22c55e]" size={16} />
+          <CheckCircle2 size={16} style={{ color: 'var(--accent)' }} />
         </div>
       )}
     </div>

@@ -88,17 +88,17 @@ export const FooterSection = () => {
           <h4 className="font-mono text-xs uppercase tracking-wider text-[#f97316] font-bold">
             LOCATION
           </h4>
-          <div className="space-y-1 font-sans text-sm text-[#9a9b9b]">
+          <div className="space-y-3 font-sans text-sm text-[#9a9b9b]">
             <p>{PERSONAL_INFO.location}</p>
-            <p className="text-[#22c55e]">{PERSONAL_INFO.availability}</p>
+            <p style={{ color: 'var(--accent)' }}>{PERSONAL_INFO.availability}</p>
           </div>
         </div>
       </div>
 
       {/* Bottom Status Bar */}
-      <div className="pt-6 border-t border-[#262626]/50 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] text-[#9a9b9b]">
+        <div className="pt-6 border-t border-[#262626]/50 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] text-[#9a9b9b]">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
+          <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--accent)' }}></span>
           <span>SYSTEMS INITIALIZED</span>
         </div>
 

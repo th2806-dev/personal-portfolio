@@ -60,14 +60,14 @@ export const ProjectModal = ({ project, onClose }) => {
         {/* Header Bar */}
         <div className="p-6 border-b border-[#262626] flex items-center justify-between bg-[#131313]">
           <div className="flex items-center gap-3">
-            <span className="font-display font-black text-2xl text-[#f97316]">
+            <span className="font-display font-black text-2xl" style={{ color: 'var(--accent)' }}>
               {project.number}
             </span>
             <div>
               <h3 className="font-display font-bold text-xl text-white">
                 {project.title}
               </h3>
-              <p className="font-mono text-xs text-[#f97316]">
+              <p className="font-mono text-xs" style={{ color: 'var(--accent)' }}>
                 {project.categoryTags}
               </p>
             </div>
@@ -150,7 +150,7 @@ export const ProjectModal = ({ project, onClose }) => {
           {activeTab === 'architecture' && (
             <div className="space-y-4">
               <div className="p-4 bg-[#1b1b1b] border border-[#2a2a2a] rounded-xl">
-                <div className="flex items-center gap-2 text-[#f97316] font-mono text-xs font-bold mb-2">
+                <div className="flex items-center gap-2 font-mono text-xs font-bold mb-2" style={{ color: 'var(--accent)' }}>
                   <Server size={16} />
                   <span>DESIGN PATTERN</span>
                 </div>
@@ -166,7 +166,7 @@ export const ProjectModal = ({ project, onClose }) => {
                 <ul className="space-y-2">
                   {project.architectureDetails.highlights.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-sm text-[#c6c6c7]">
-                      <CheckCircle2 size={16} className="text-[#22c55e] shrink-0 mt-0.5" />
+                      <CheckCircle2 size={16} className="shrink-0 mt-0.5" style={{ color: 'var(--accent)' }} />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -175,10 +175,10 @@ export const ProjectModal = ({ project, onClose }) => {
 
               {project.architectureDetails.databaseDesign && (
                 <div className="p-4 bg-[#1b1b1b] border border-[#2a2a2a] rounded-xl">
-                  <div className="flex items-center gap-2 text-[#22c55e] font-mono text-xs font-bold mb-2">
-                    <Database size={16} />
-                    <span>DATABASE PERSISTENCE DESIGN</span>
-                  </div>
+                  <div className="flex items-center gap-2 font-mono text-xs font-bold mb-2" style={{ color: 'var(--accent)' }}>
+                      <Database size={16} />
+                      <span>DATABASE PERSISTENCE DESIGN</span>
+                    </div>
                   <p className="font-sans text-sm text-[#c6c6c7]">
                     {project.architectureDetails.databaseDesign}
                   </p>
@@ -218,8 +218,8 @@ export const ProjectModal = ({ project, onClose }) => {
                   <div className="text-[#f97316] animate-pulse py-6 text-center">
                     Executing .NET Web API pipeline & Redis transaction...
                   </div>
-                ) : simState.output ? (
-                  <pre className="text-[#22c55e] overflow-x-auto whitespace-pre-wrap leading-relaxed">
+                  ) : simState.output ? (
+                  <pre className="overflow-x-auto whitespace-pre-wrap leading-relaxed" style={{ color: 'var(--accent)' }}>
                     {simState.output}
                   </pre>
                 ) : (

@@ -240,7 +240,10 @@ Generated from Portfolio: https://thachhien.dev
 
             {/* Direct download status message */}
             {downloadSuccess ? (
-              <div className="bg-[#22c55e]/10 border border-[#22c55e]/30 text-[#22c55e] p-3 rounded-xl font-mono text-xs flex items-center gap-2 justify-center">
+              <div
+                style={{ background: 'rgba(var(--accent-rgba),0.10)', border: '1px solid rgba(var(--accent-rgba),0.30)', color: 'var(--accent)' }}
+                className="p-3 rounded-xl font-mono text-xs flex items-center gap-2 justify-center"
+              >
                 <Check size={16} />
                 <span>Đã bắt đầu tải xuống thành công!</span>
               </div>

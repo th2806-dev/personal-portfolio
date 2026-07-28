@@ -14,7 +14,7 @@ export const HeroSection = ({ onSelectHighlight }) => {
 
   return (
     <section id="about" className="pt-6 pb-12 px-4 sm:px-8 max-w-7xl mx-auto space-y-6">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-stretch">
         {/* Left Column - Profile Card */}
         <div className="lg:col-span-4 bg-[#121212] border border-[#262626] rounded-2xl p-5 flex flex-col justify-between hover:border-[#f97316]/50 transition-all duration-300 group shadow-lg">
           <div>
@@ -85,10 +85,10 @@ export const HeroSection = ({ onSelectHighlight }) => {
           {/* Main Title Banner & Live Status Badge */}
           <div>
             {/* Live Systems Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#12131a] border border-[#22c55e]/30 text-[#4ade80] font-mono text-xs mb-4 shadow-[0_0_15px_rgba(34,197,94,0.12)]">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#12131a] border text-[#4ade80] font-mono text-xs mb-4" style={{ borderColor: 'rgba(var(--accent-rgba),0.30)', boxShadow: '0 0 15px rgba(var(--accent-rgba),0.12)' }}>
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#22c55e]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full" style={{ background: 'var(--accent)', opacity: 0.75 }}></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5" style={{ background: 'var(--accent)' }}></span>
               </span>
               <span className="font-bold tracking-wide">SYSTEM ONLINE</span>
               <span className="text-[#3b3d52]">•</span>
@@ -129,8 +129,8 @@ export const HeroSection = ({ onSelectHighlight }) => {
                 >
                   {copied ? (
                     <>
-                      <Check size={12} className="text-[#22c55e]" />
-                      <span className="text-[#22c55e]">Copied!</span>
+                      <Check size={12} style={{ color: 'var(--accent)' }} />
+                      <span style={{ color: 'var(--accent)' }}>Copied!</span>
                     </>
                   ) : (
                     <>

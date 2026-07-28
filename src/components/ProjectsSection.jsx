@@ -11,8 +11,8 @@ export const ProjectsSection = () => {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <div className="flex items-center gap-2 font-mono text-xs text-[#f97316] font-bold tracking-wider uppercase mb-2">
-            <Sparkles size={16} />
+          <div className="flex items-center gap-2 font-mono text-xs font-bold tracking-wider uppercase mb-2" style={{ color: 'var(--accent)' }}>
+            <Sparkles size={16} style={{ color: 'var(--accent)' }} />
             <span>FEATURED WORK</span>
           </div>
           <h2 className="font-display font-black text-4xl sm:text-5xl text-white tracking-tight">
@@ -45,7 +45,7 @@ export const ProjectsSection = () => {
                   <h3 className="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
                     {project.title}
                   </h3>
-                  <div className="font-mono text-xs text-[#f97316] font-semibold tracking-wider mt-1.5 uppercase">
+                  <div className="font-mono text-xs font-semibold tracking-wider mt-1.5 uppercase" style={{ color: 'var(--accent)' }}>
                     {project.categoryTags}
                   </div>
                 </div>
@@ -79,10 +79,7 @@ export const ProjectsSection = () => {
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1b1b1b] border border-[#2a2a2a] hover:border-[#f97316] text-white font-mono text-xs font-bold rounded-xl hover:bg-[#222222] hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-200 cursor-pointer group active:scale-95"
                     >
                       <span>INSPECT ARCHITECTURE & DEMO</span>
-                      <ArrowUpRight
-                        size={16}
-                        className="text-[#f97316] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
-                      />
+                      <ArrowUpRight size={16} style={{ color: 'var(--accent)' }} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
                     </button>
                   </div>
                 </div>
@@ -100,7 +97,7 @@ export const ProjectsSection = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="px-4 py-2.5 bg-black/80 backdrop-blur-md border border-[#f97316] text-[#f97316] font-mono text-xs font-bold rounded-xl flex items-center gap-2 shadow-2xl group-hover:scale-105 transition-transform">
+                      <span className="px-4 py-2.5 bg-black/80 backdrop-blur-md font-mono text-xs font-bold rounded-xl flex items-center gap-2 shadow-2xl group-hover:scale-105 transition-transform" style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}>
                         <Layers size={16} />
                         Inspect Architecture & Specs
                       </span>

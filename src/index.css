@@ -18,6 +18,13 @@
   }
 }
 
+:root {
+  --accent: #f97316; /* primary orange */
+  --accent-2: #a855f7; /* purple */
+  --accent-3: #ea580c; /* secondary orange */
+  --accent-rgba: 249,115,22; /* for rgba usage */
+}
+
 /* Custom scrollbars and dark aesthetics */
 ::-webkit-scrollbar {
   width: 8px;
@@ -30,7 +37,12 @@
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #f97316;
+  background: var(--accent);
+}
+
+::selection {
+  background: var(--accent);
+  color: black;
 }
 
 @keyframes pulseGlow {

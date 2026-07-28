@@ -15,7 +15,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
         {/* Top Header */}
         <div className="p-5 border-b border-[#262626] flex items-center justify-between bg-[#131313]">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#f97316]"></span>
+            <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'var(--accent)' }}></span>
             <h3 className="font-display font-bold text-lg text-white">
               CURRICULUM VITAE — {PERSONAL_INFO.name.toUpperCase()}
             </h3>
@@ -46,18 +46,18 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               <h1 className="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
                 {PERSONAL_INFO.name}
               </h1>
-              <p className="font-mono text-sm text-[#f97316] font-bold mt-1">
+              <p className="font-mono text-sm font-bold mt-1" style={{ color: 'var(--accent)' }}>
                 {PERSONAL_INFO.title}
               </p>
             </div>
 
             <div className="font-mono text-xs text-[#9a9b9b] space-y-1">
               <div className="flex items-center gap-2">
-                <Mail size={12} className="text-[#f97316]" />
+                <Mail size={12} style={{ color: 'var(--accent)' }} />
                 <span>{PERSONAL_INFO.email}</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin size={12} className="text-[#f97316]" />
+                <MapPin size={12} style={{ color: 'var(--accent)' }} />
                 <span>{PERSONAL_INFO.location}</span>
               </div>
             </div>
@@ -65,7 +65,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
 
           {/* Professional Summary */}
           <div>
-            <h2 className="font-mono text-xs uppercase tracking-wider text-[#f97316] font-bold mb-2 flex items-center gap-2">
+            <h2 className="font-mono text-xs uppercase tracking-wider font-bold mb-2 flex items-center gap-2" style={{ color: 'var(--accent)' }}>
               <Briefcase size={14} />
               <span>PROFESSIONAL SUMMARY</span>
             </h2>
@@ -76,7 +76,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
 
           {/* Education */}
           <div>
-            <h2 className="font-mono text-xs uppercase tracking-wider text-[#f97316] font-bold mb-2 flex items-center gap-2">
+            <h2 className="font-mono text-xs uppercase tracking-wider font-bold mb-2 flex items-center gap-2" style={{ color: 'var(--accent)' }}>
               <GraduationCap size={14} />
               <span>EDUCATION</span>
             </h2>
@@ -89,7 +89,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
                   {EDUCATION_DATA.degree} ({EDUCATION_DATA.period})
                 </p>
               </div>
-              <div className="font-mono text-sm text-[#22c55e] font-bold bg-[#22c55e]/10 px-3 py-1 rounded border border-[#22c55e]/20">
+              <div className="font-mono text-sm font-bold px-3 py-1 rounded" style={{ background: 'rgba(var(--accent-rgba),0.10)', color: 'var(--accent)', border: '1px solid rgba(var(--accent-rgba),0.20)' }}>
                 GPA: {EDUCATION_DATA.gpa}
               </div>
             </div>
@@ -97,25 +97,25 @@ export const ResumeModal = ({ isOpen, onClose }) => {
 
           {/* Technical Skills Overview */}
           <div>
-            <h2 className="font-mono text-xs uppercase tracking-wider text-[#f97316] font-bold mb-3 flex items-center gap-2">
+            <h2 className="font-mono text-xs uppercase tracking-wider font-bold mb-3 flex items-center gap-2" style={{ color: 'var(--accent)' }}>
               <Code2 size={14} />
               <span>TECHNICAL COMPETENCIES</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="p-3 bg-[#121212] rounded-xl border border-[#262626] text-xs">
-                <div className="font-mono text-[#f97316] font-bold mb-1">Languages & Core:</div>
+                <div className="font-mono font-bold mb-1" style={{ color: 'var(--accent)' }}>Languages & Core:</div>
                 <div className="text-[#c6c6c7]">C# (.NET 10), ES6+, HTML5, CSS3</div>
               </div>
               <div className="p-3 bg-[#121212] rounded-xl border border-[#262626] text-xs">
-                <div className="font-mono text-[#f97316] font-bold mb-1">Backend Frameworks:</div>
+                <div className="font-mono font-bold mb-1" style={{ color: 'var(--accent)' }}>Backend Frameworks:</div>
                 <div className="text-[#c6c6c7]">ASP.NET Core Web API, EF Core, JWT, RBAC</div>
               </div>
               <div className="p-3 bg-[#121212] rounded-xl border border-[#262626] text-xs">
-                <div className="font-mono text-[#f97316] font-bold mb-1">Database & Caching:</div>
+                <div className="font-mono font-bold mb-1" style={{ color: 'var(--accent)' }}>Database & Caching:</div>
                 <div className="text-[#c6c6c7]">SQL Server, MongoDB, Redis Distributed Cache</div>
               </div>
               <div className="p-3 bg-[#121212] rounded-xl border border-[#262626] text-xs">
-                <div className="font-mono text-[#f97316] font-bold mb-1">DevOps & Frontend:</div>
+                <div className="font-mono font-bold mb-1" style={{ color: 'var(--accent)' }}>DevOps & Frontend:</div>
                 <div className="text-[#c6c6c7]">Docker, Git, ReactJS (Vite), Postman, VS Code</div>
               </div>
             </div>
@@ -123,15 +123,15 @@ export const ResumeModal = ({ isOpen, onClose }) => {
 
           {/* Featured Key Projects */}
           <div>
-            <h2 className="font-mono text-xs uppercase tracking-wider text-[#f97316] font-bold mb-3 flex items-center gap-2">
+            <h2 className="font-mono text-xs uppercase tracking-wider font-bold mb-3 flex items-center gap-2" style={{ color: 'var(--accent)' }}>
               <Award size={14} />
               <span>FEATURED PORTFOLIO PROJECTS</span>
             </h2>
             <div className="space-y-3">
               <div className="p-4 bg-[#121212] rounded-xl border border-[#262626]">
-                <div className="flex items-center justify-between text-sm font-bold text-white mb-1">
+                  <div className="flex items-center justify-between text-sm font-bold text-white mb-1">
                   <span>01. MOVIE BOOKING ECOSYSTEM</span>
-                  <span className="font-mono text-xs text-[#f97316]">Full-Stack Monorepo</span>
+                  <span className="font-mono text-xs" style={{ color: 'var(--accent)' }}>Full-Stack Monorepo</span>
                 </div>
                 <p className="text-xs text-[#9a9b9b] leading-relaxed">
                   3-Tier Layered Architecture with JWT authentication, RBAC, Redis atomic seat locking, and Docker deployment.
@@ -139,9 +139,9 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               </div>
 
               <div className="p-4 bg-[#121212] rounded-xl border border-[#262626]">
-                <div className="flex items-center justify-between text-sm font-bold text-white mb-1">
+                  <div className="flex items-center justify-between text-sm font-bold text-white mb-1">
                   <span>02. ENTERPRISE LOGISTICS HUB</span>
-                  <span className="font-mono text-xs text-[#f97316]">System Design / Core Backend</span>
+                  <span className="font-mono text-xs" style={{ color: 'var(--accent)' }}>System Design / Core Backend</span>
                 </div>
                 <p className="text-xs text-[#9a9b9b] leading-relaxed">
                   Redis master data acceleration (50x), Hangfire background processing, Strategy/Factory OOP patterns, polyglot SQL Server + MongoDB.
@@ -158,7 +158,8 @@ export const ResumeModal = ({ isOpen, onClose }) => {
           </span>
           <button
             onClick={handlePrint}
-            className="flex items-center gap-2 px-4 py-2 bg-[#f97316] text-black font-mono font-bold text-xs rounded-lg hover:bg-[#ff802b] transition-all cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 text-black font-mono font-bold text-xs rounded-lg transition-all cursor-pointer"
+            style={{ background: 'var(--accent)' }}
           >
             <Download size={14} />
             <span>Download PDF</span>
