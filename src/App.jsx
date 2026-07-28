@@ -11,6 +11,7 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { ContactSection } from './components/ContactSection';
 import { FooterSection } from './components/FooterSection';
 import { ResumeModal } from './components/ResumeModal';
+import { ChatBot } from './components/ChatBot';
 import { Sparkles, CheckCircle2 } from 'lucide-react';
 
 export default function App() {
@@ -102,6 +103,9 @@ export default function App() {
           <CheckCircle2 size={16} style={{ color: 'var(--accent)' }} />
         </div>
       )}
+
+      {/* AI Chatbot */}
+      <ChatBot />
     </div>
   );
 }
