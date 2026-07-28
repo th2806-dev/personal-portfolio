@@ -57,7 +57,7 @@ export const PROJECTS_DATA = [
     categoryTags: 'FULL-STACK / .NET 10 / MONOREPO',
     description: 'Designed and structured a production-ready Movie Booking API using a 3-Tier Layered Architecture to achieve strict separation of concerns. Implemented secure JWT authentication and Role-Based Access Control (RBAC). Optimized for high-concurrency seat selection and containerized using Docker.',
     keyStack: ['.NET 10', 'ASP.NET CORE', 'EF CORE', 'SQL SERVER', 'REACTJS', 'DOCKER'],
-    image: '/src/assets/images/movie_booking_demo_1785175602739.jpg',
+    image: '/images/movie_booking_demo_1785175602739.jpg',
     architectureDetails: {
       pattern: '3-Tier Layered Monorepo Architecture (Presentation, Business Logic, Data Access)',
       highlights: [
@@ -83,7 +83,7 @@ export const PROJECTS_DATA = [
     categoryTags: 'CORE BACKEND / SYSTEM DESIGN',
     description: 'High-performance distribution ecosystem designed for high-concurrency big data. Integrated Redis for master data lookup, accelerating response times up to 50x. Leveraged Strategy/Factory patterns and Hangfire for async jobs. Polyglot persistence using SQL Server and MongoDB.',
     keyStack: ['.NET 10', 'REDIS', 'MONGODB', 'HANGFIRE', 'PATTERNS', 'REACT'],
-    image: '/src/assets/images/logistics_hub_demo_1785175618427.jpg',
+    image: '/images/logistics_hub_demo_1785175618427.jpg',
     architectureDetails: {
       pattern: 'Polyglot Persistence with Async Job Queue & Event Pipeline',
       highlights: [

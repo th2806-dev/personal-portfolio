@@ -19,9 +19,9 @@ export const HeroSection = ({ onSelectHighlight }) => {
         <div className="lg:col-span-4 bg-[#121212] border border-[#262626] rounded-2xl p-5 flex flex-col justify-between hover:border-[var(--accent)]/50 transition-all duration-300 group shadow-lg">
           <div>
             {/* Image Container */}
-            <div className="w-full aspect-square bg-[#1b1b1b] border border-[#2a2a2a] rounded-xl overflow-hidden mb-5 relative group/img">
+            <div className="w-full aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5] min-h-[24rem] bg-[#1b1b1b] border border-[#2a2a2a] rounded-xl overflow-hidden mb-5 relative group/img">
               <img
-                src="/src/assets/images/profile_avatar_1785175586090.jpg"
+                src="/images/profile_avatar_1785175586090.jpg"
                 alt="Thach Hien Developer"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
