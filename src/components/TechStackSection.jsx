@@ -148,7 +148,6 @@ export const TechStackSection = () => {
     },
   ];
 
-  // utility: convert hex to rgba
   const hexToRgba = (hex, alpha = 1) => {
     const h = hex.replace('#', '');
     const bigint = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16);
@@ -194,11 +193,9 @@ export const TechStackSection = () => {
         }}
         className="group relative w-[95px] h-[95px] sm:w-[110px] sm:h-[110px] rounded-2xl flex flex-col items-center justify-center gap-2 cursor-pointer select-none"
       >
-        {/* Icon */}
         <div className="flex items-center justify-center w-11 h-11 sm:w-13 sm:h-13">
           {tech.icon}
         </div>
-        {/* Label */}
         <span
           style={{
             color: isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.50)',
