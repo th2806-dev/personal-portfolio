@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-hero {
+    font-family: 'Montserrat', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  .font-display {
+    font-family: 'Plus Jakarta Sans', 'Hanken Grotesk', sans-serif;
+  }
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars and dark aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0e0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
