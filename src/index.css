@@ -13,6 +13,9 @@
   .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
+  .font-geist {
+    font-family: 'Geist', 'Inter', sans-serif;
+  }
 }
 
 /* Custom scrollbars and dark aesthetics */

@@ -5,11 +5,13 @@ export const FooterSection: React.FC = () => {
   return (
     <footer className="pt-20 pb-8 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#262626]/50 relative overflow-hidden">
       {/* Background Watermark Text */}
-      <div className="w-full text-center select-none overflow-hidden my-8 opacity-40 pointer-events-none">
+      <div className="w-full text-center select-none overflow-hidden my-8 opacity-80 pointer-events-none">
         <span
-          className="font-display font-black text-6xl sm:text-8xl lg:text-[120px] tracking-widest uppercase text-transparent block"
+          className="font-sans font-black text-6xl sm:text-8xl lg:text-[120px] tracking-[0.02em] uppercase whitespace-nowrap block"
           style={{
-            WebkitTextStroke: '2px #353535',
+            WebkitTextFillColor: '#0e0e0e',
+            WebkitTextStroke: '2px rgba(255, 255, 255, 0.2)',
+            paintOrder: 'stroke fill',
           }}
         >
           THACHHIENDEV

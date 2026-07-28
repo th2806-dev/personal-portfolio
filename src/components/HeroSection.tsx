@@ -99,11 +99,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectHighlight }) =
               <span className="text-[#94a3b8] font-semibold">Available for Hire</span>
             </div>
 
-            <div className="mb-4 space-y-0.5">
-              <h1 className="font-hero font-black text-5xl sm:text-7xl lg:text-[88px] xl:text-[98px] tracking-tight text-[#f3f4f6] leading-[0.88] uppercase select-none">
+            <div className="mb-4 space-y-0">
+              <h1 className="font-hero font-extrabold text-3xl sm:text-5xl lg:text-[60px] xl:text-[68px] tracking-[-0.01em] text-[#f3f4f6] leading-[0.92] uppercase select-none">
                 SOFTWARE
               </h1>
-              <h1 className="font-hero font-black text-5xl sm:text-7xl lg:text-[88px] xl:text-[98px] tracking-tight text-[#404350] leading-[0.88] uppercase select-none">
+              <h1 className="font-hero font-extrabold text-3xl sm:text-5xl lg:text-[60px] xl:text-[68px] tracking-[-0.01em] text-[#404350] leading-[0.92] uppercase select-none">
                 ENGINEER
               </h1>
             </div>

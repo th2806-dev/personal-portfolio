@@ -76,122 +76,144 @@ Generated from Portfolio: https://thachhien.dev
   };
 
   return (
-    <header className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 max-w-7xl mx-auto">
-      {/* Outer Floating Card Container */}
-      <div className="relative bg-[#14151d]/90 backdrop-blur-xl border border-[#2a2c3a] rounded-2xl sm:rounded-full p-2 sm:p-2.5 pl-4 sm:pl-6 pr-3 sm:pr-4 flex items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.7)] transition-all">
+    <header className="sticky top-3 sm:top-4 z-50 px-2.5 sm:px-6 max-w-7xl mx-auto">
+      {/* Outer Floating Header Container (Responsive Glassmorphism & Shadow) */}
+      <div className="relative bg-[#0f1018]/95 backdrop-blur-2xl border-t border-white/15 border-x border-b border-[#232536] rounded-full px-3.5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.95),0_0_30px_rgba(249,115,22,0.08),inset_0_1px_1px_rgba(255,255,255,0.1)] overflow-hidden transition-all duration-300">
         
-        {/* Left Side: Brand Logo & Subtitle */}
-        <div className="flex items-center gap-3 sm:gap-4 relative z-10">
-          <a href="#" className="flex items-center gap-3 group">
-            {/* Logo Emblem Icon */}
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#f97316] to-[#c2410c] flex items-center justify-center text-white font-mono font-black text-base shadow-[0_0_15px_rgba(249,115,22,0.4)] group-hover:scale-105 transition-transform">
+        {/* Left Side: Dual-Layer 3D Glowing S-Curve Partition (Scales smoothly with screen width) */}
+        <div className="absolute left-0 top-0 h-full w-[180px] min-[420px]:w-[240px] sm:w-[300px] md:w-[360px] pointer-events-none overflow-hidden transition-all duration-300">
+          <svg className="w-full h-full" viewBox="0 0 360 60" preserveAspectRatio="none">
+            {/* Background Ambient Fill */}
+            <path
+              d="M 0,60 L 230,60 C 280,60 260,0 330,0 L 0,0 Z"
+              fill="url(#logo-area-gradient-depth)"
+            />
+            {/* Soft Outer Neon Blur Glow */}
+            <path
+              d="M 230,60 C 280,60 260,0 330,0"
+              fill="none"
+              stroke="#f97316"
+              strokeWidth="7"
+              opacity="0.35"
+              filter="blur(4px)"
+            />
+            {/* Crisp Bright Surface Stroke */}
+            <path
+              d="M 230,60 C 280,60 260,0 330,0"
+              fill="none"
+              stroke="url(#logo-curve-stroke-depth)"
+              strokeWidth="2.5"
+            />
+            <defs>
+              <linearGradient id="logo-area-gradient-depth" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#f97316" stopOpacity="0.3" />
+                <stop offset="60%" stopColor="#8b5cf6" stopOpacity="0.2" />
+                <stop offset="100%" stopColor="#0f1018" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient id="logo-curve-stroke-depth" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ff8c38" stopOpacity="1" />
+                <stop offset="60%" stopColor="#c084fc" stopOpacity="0.9" />
+                <stop offset="100%" stopColor="#818cf8" stopOpacity="0.3" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        {/* Left Side: Brand Logo & Title (Responsive scaling) */}
+        <div className="flex items-center gap-2.5 sm:gap-3 relative z-10">
+          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group">
+            {/* 3D Logo Emblem */}
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#fb923c] via-[#ea580c] to-[#7c3aed] border border-white/30 flex items-center justify-center text-white font-mono font-black text-xs sm:text-sm shadow-[0_4px_18px_rgba(249,115,22,0.55),inset_0_1px_2px_rgba(255,255,255,0.7)] group-hover:scale-105 group-hover:shadow-[0_0_25px_rgba(249,115,22,0.85)] group-hover:border-white/60 transition-all duration-300">
               TH
             </div>
             
-            {/* Title & Tagline */}
+            {/* Title & Subtitle */}
             <div className="flex flex-col">
-              <span className="font-display font-black text-sm sm:text-base tracking-tight text-white group-hover:text-[#f97316] transition-colors leading-tight">
+              <span className="font-display font-black text-xs min-[420px]:text-sm sm:text-base tracking-tight text-white group-hover:text-[#f97316] transition-colors leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 THACHHIENDEV
               </span>
-              <span className="font-sans text-[10px] text-[#8e90a0] tracking-wide font-medium">
+              <span className="font-sans text-[9px] sm:text-[11px] text-[#a0a2b6] tracking-wide font-medium hidden min-[380px]:block">
                 Software. Engineer. Systems.
               </span>
             </div>
           </a>
-
-          {/* Decorative Curved S-Wave Partition Gradient (Desktop) */}
-          <div className="hidden lg:block h-8 w-12 ml-2 relative opacity-60">
-            <svg viewBox="0 0 50 30" className="w-full h-full fill-none">
-              <path
-                d="M 0 0 C 25 0, 25 30, 50 30"
-                stroke="url(#orange-wave-grad)"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <defs>
-                <linearGradient id="orange-wave-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#f97316" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.2" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
         </div>
 
-        {/* Center: Inner Floating Pill Navigation Bar */}
-        <nav className="hidden md:flex items-center bg-[#0d0e14]/90 border border-[#232533] rounded-full px-2 py-1.5 shadow-inner">
+        {/* Center: Inset 3D Embedded Nav Pill (Desktop lg: and above only) */}
+        <nav className="hidden lg:flex items-center bg-[#07080d] border border-[#1e2030] rounded-full px-3 py-1.5 shadow-[inset_0_3px_8px_rgba(0,0,0,0.95),0_1px_1px_rgba(255,255,255,0.06)] gap-1.5 relative z-10">
           {navItems.map((item) => {
             const isActive = activeNav === item.label;
+            const titleCaseLabel = item.label.charAt(0) + item.label.slice(1).toLowerCase();
             return (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setActiveNav(item.label)}
-                className={`relative px-4 py-1.5 rounded-full font-mono text-xs font-semibold tracking-wider transition-all duration-200 ${
+                className={`relative px-3.5 lg:px-4 py-1.5 rounded-full font-sans text-xs font-semibold transition-all duration-200 ${
                   isActive
-                    ? 'text-white font-bold'
-                    : 'text-[#8e90a0] hover:text-white'
+                    ? 'text-white font-bold bg-gradient-to-r from-[#f97316]/30 to-[#a855f7]/30 border border-[#f97316]/50 shadow-[0_2px_12px_rgba(249,115,22,0.35),inset_0_1px_1px_rgba(255,255,255,0.25)] scale-100'
+                    : 'text-[#9496a8] hover:text-[#f97316] hover:bg-[#f97316]/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] hover:scale-105 active:scale-95'
                 }`}
               >
-                {/* Active Highlight Line / Indicator */}
+                {titleCaseLabel}
                 {isActive && (
-                  <span className="absolute bottom-0.5 left-4 right-4 h-0.5 bg-[#f97316] rounded-full shadow-[0_0_8px_#f97316]"></span>
+                  <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-[#f97316] rounded-full shadow-[0_0_10px_#f97316]"></span>
                 )}
-                {item.label}
               </a>
             );
           })}
         </nav>
 
-        {/* Right Side: Primary CTA & Social Utilities */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* GitHub Icon Link */}
+        {/* Right Side: Primary CTA & Utility Icons */}
+        <div className="flex items-center gap-1.5 sm:gap-2.5 relative z-10">
+          {/* GitHub Icon Button */}
           <a
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub Profile"
-            className="p-2 sm:p-2.5 rounded-full bg-[#1c1d27] border border-[#2e3040] text-[#9a9cb0] hover:text-white hover:border-[#f97316] transition-all cursor-pointer"
+            className="p-2 sm:p-2.5 rounded-full bg-[#161724] border border-[#2a2c3e] text-[#9a9cb0] hover:text-[#f97316] hover:border-[#f97316] hover:bg-[#f97316]/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.35)] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer hidden xl:flex"
           >
             <Github size={15} />
           </a>
 
-          {/* LinkedIn Icon Link */}
+          {/* LinkedIn Icon Button */}
           <a
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn Profile"
-            className="p-2 sm:p-2.5 rounded-full bg-[#1c1d27] border border-[#2e3040] text-[#9a9cb0] hover:text-white hover:border-[#f97316] transition-all cursor-pointer hidden sm:flex"
+            className="p-2 sm:p-2.5 rounded-full bg-[#161724] border border-[#2a2c3e] text-[#9a9cb0] hover:text-[#f97316] hover:border-[#f97316] hover:bg-[#f97316]/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.35)] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer hidden xl:flex"
           >
             <Linkedin size={15} />
           </a>
 
-          {/* Main Action Pill Button (Opens Download Confirm Prompt) */}
+          {/* 3D Elevated Pill Button (`DOWNLOAD CV`) */}
           <button
             onClick={() => setShowConfirmDownload(true)}
-            className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white font-mono font-bold text-xs rounded-full hover:shadow-[0_0_20px_rgba(249,115,22,0.45)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
+            className="group flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-[#f97316] via-[#ea580c] to-[#a855f7] border border-white/30 text-white font-sans font-bold text-[11px] sm:text-xs rounded-full shadow-[0_6px_25px_rgba(249,115,22,0.55),inset_0_1px_2px_rgba(255,255,255,0.6)] hover:shadow-[0_8px_32px_rgba(249,115,22,0.85)] hover:scale-[1.04] active:scale-95 transition-all duration-200 cursor-pointer"
           >
-            <span>DOWNLOAD CV</span>
-            <Download size={14} />
+            <span className="whitespace-nowrap">DOWNLOAD CV</span>
+            <Download size={13} className="group-hover:translate-y-0.5 group-hover:scale-110 transition-transform duration-200" />
           </button>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Grid Icon Button (Shows on all screens below lg:) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 sm:p-2.5 rounded-full bg-[#1c1d27] border border-[#2e3040] text-[#9a9cb0] hover:text-white md:hidden"
+            className="p-2 sm:p-2.5 rounded-full bg-[#161724] border border-[#2a2c3e] text-[#9a9cb0] hover:text-[#f97316] hover:border-[#f97316] hover:bg-[#f97316]/10 hover:shadow-[0_0_15px_rgba(249,115,22,0.35)] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer lg:hidden"
+            title="Menu"
           >
-            {mobileMenuOpen ? <X size={16} /> : <Grid size={16} />}
+            {mobileMenuOpen ? <X size={15} /> : <Grid size={15} />}
           </button>
         </div>
       </div>
 
       {/* Confirmation Modal / Prompt for CV Download */}
       {showConfirmDownload && (
-        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-[#14151d] border border-[#2a2c3a] rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-200">
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="bg-[#14151d] border border-[#2a2c3a] rounded-3xl p-5 sm:p-6 max-w-md w-full shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between pb-3 border-b border-[#252736]">
-              <div className="flex items-center gap-2 text-white font-display font-bold text-lg">
+              <div className="flex items-center gap-2 text-white font-display font-bold text-base sm:text-lg">
                 <FileText className="text-[#f97316]" size={20} />
                 <span>Xác nhận tải xuống CV</span>
               </div>
@@ -203,7 +225,7 @@ Generated from Portfolio: https://thachhien.dev
               </button>
             </div>
 
-            <div className="space-y-3 font-sans text-sm text-[#a2a4b8]">
+            <div className="space-y-3 font-sans text-xs sm:text-sm text-[#a2a4b8]">
               <p>
                 Bạn có chắc chắn muốn tải xuống hồ sơ năng lực (CV) của <strong className="text-white">Thạch Hiển - Software Engineer</strong> không?
               </p>
@@ -249,22 +271,31 @@ Generated from Portfolio: https://thachhien.dev
         </div>
       )}
 
-      {/* Mobile Dropdown Navigation */}
+      {/* Mobile Dropdown Navigation with Smooth Glassmorphic Entrance Animation */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-2 bg-[#14151d] border border-[#2a2c3a] rounded-2xl p-4 shadow-2xl flex flex-col gap-3 font-mono text-xs">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={() => {
-                setActiveNav(item.label);
-                setMobileMenuOpen(false);
-              }}
-              className="px-4 py-2.5 rounded-xl bg-[#1c1d27] text-white font-bold hover:bg-[#f97316] transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className="lg:hidden mt-2.5 bg-[#0f1018]/95 backdrop-blur-2xl border border-[#26283a] rounded-2xl p-3 shadow-[0_20px_40px_rgba(0,0,0,0.8)] flex flex-col gap-2 font-sans text-xs animate-in fade-in slide-in-from-top-2 duration-200">
+          {navItems.map((item) => {
+            const isActive = activeNav === item.label;
+            const titleCaseLabel = item.label.charAt(0) + item.label.slice(1).toLowerCase();
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => {
+                  setActiveNav(item.label);
+                  setMobileMenuOpen(false);
+                }}
+                className={`px-4 py-2.5 rounded-xl font-bold flex items-center justify-between transition-all duration-200 ${
+                  isActive
+                    ? 'bg-gradient-to-r from-[#f97316]/25 to-[#a855f7]/25 text-[#f97316] border border-[#f97316]/40'
+                    : 'text-[#9496a8] hover:text-white hover:bg-white/5'
+                }`}
+              >
+                <span>{titleCaseLabel}</span>
+                {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#f97316] shadow-[0_0_8px_#f97316]"></span>}
+              </a>
+            );
+          })}
         </div>
       )}
     </header>
