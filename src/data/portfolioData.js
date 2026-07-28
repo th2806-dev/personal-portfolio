@@ -6,7 +6,7 @@ export const PERSONAL_INFO = {
   email: 'th.2806.dev@gmail.com',
   phone: '0906891704',
   github: 'https://github.com/th2806-dev',
-  linkedin: 'https://www.linkedin.com/in/thachhien',
+  linkedin: 'https://www.linkedin.com/in/thachhien-dev',
   portfolioUrl: 'https://thachhiendev.vercel.app',
   location: 'HCMCT',
   availability: 'Available for Internship / Remote Work',
