@@ -106,52 +106,7 @@ export const HeroSection = ({ onSelectHighlight }) => {
 
             <p className="text-[#c6c6c7] font-sans text-base sm:text-lg max-w-3xl leading-relaxed mb-4">
               {PERSONAL_INFO.subtitle}
-            </p>
-
-            {/* Micro Terminal / Docker Snippet Box */}
-            <div className="bg-[#0b0c10] border border-[#232533] rounded-xl p-3.5 sm:p-4 font-mono text-xs shadow-xl relative overflow-hidden group/term">
-              <div className="flex items-center justify-between pb-2.5 border-b border-[#1c1d29] mb-3">
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]/80"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#eab308]/80"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent)]/80"></span>
-                  </div>
-                  <span className="text-[#64748b] text-[11px] ml-2 flex items-center gap-1.5 font-bold">
-                    <Terminal size={13} className="text-[var(--accent)]" />
-                    deploy-service.sh
-                  </span>
-                </div>
-                <button
-                  onClick={handleCopy}
-                  className="flex items-center gap-1.5 text-[11px] text-[#94a3b8] hover:text-white px-2 py-1 rounded bg-[#161822] border border-[#272938] hover:border-[var(--accent)] transition-all cursor-pointer"
-                  title="Copy command"
-                >
-                  {copied ? (
-                    <>
-                      <Check size={12} style={{ color: 'var(--accent)' }} />
-                      <span style={{ color: 'var(--accent)' }}>Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy size={12} />
-                      <span>Copy</span>
-                    </>
-                  )}
-                </button>
-              </div>
-
-              <div className="space-y-1.5 text-[#cbd5e1] overflow-x-auto">
-                <div className="flex items-center gap-2 text-[#94a3b8]">
-                  <span className="text-[var(--accent)]">$</span>
-                  <span className="text-[#38bdf8]">{dockerCommand}</span>
-                </div>
-                <div className="flex items-center gap-2 text-[#64748b] text-[11px] pt-1">
-                  <ShieldCheck size={13} className="text-[var(--accent)]" />
-                  <span>[Container Status]: Operational | .NET 10.0 (C# 13) | Port 8080:OK</span>
-                </div>
-              </div>
-            </div>
+            </p>           
           </div>
 
           {/* 3 Metric Stat Blocks */}
