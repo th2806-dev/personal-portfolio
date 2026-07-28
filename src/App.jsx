@@ -16,13 +16,13 @@ import { Sparkles, CheckCircle2 } from 'lucide-react';
 export default function App() {
   const [resumeOpen, setResumeOpen] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
-  const [highlightToast, setHighlightToast] = useState<string | null>(null);
+  const [highlightToast, setHighlightToast] = useState(null);
 
   // Web Audio API chime tone synthesizer
   const playAudioChime = () => {
     if (!soundEnabled) return;
     try {
-      const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
       if (!AudioCtx) return;
       const ctx = new AudioCtx();
       const osc = ctx.createOscillator();
@@ -40,7 +40,7 @@ export default function App() {
 
       osc.start();
       osc.stop(ctx.currentTime + 0.25);
-    } catch {
+    } catch (e) {
       // Audio context silenced or blocked by browser policy
     }
   };
@@ -49,7 +49,7 @@ export default function App() {
     setSoundEnabled(!soundEnabled);
   };
 
-  const handleSelectHighlight = (topic: string) => {
+  const handleSelectHighlight = (topic) => {
     playAudioChime();
     setHighlightToast(`Inspecting ${topic}`);
     setTimeout(() => setHighlightToast(null), 2500);

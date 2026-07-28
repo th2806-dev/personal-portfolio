@@ -2,12 +2,7 @@ import React from 'react';
 import { X, Download, Printer, CheckCircle, Mail, Phone, MapPin, GraduationCap, Briefcase, Award, Code2 } from 'lucide-react';
 import { PERSONAL_INFO, EDUCATION_DATA, TECH_STACK_DATA } from '../data/portfolioData';
 
-interface ResumeModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
+export const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const handlePrint = () => {

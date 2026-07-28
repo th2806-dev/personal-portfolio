@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import { Github, Linkedin, Download, ArrowRight, Grid, X, Check, FileText, ExternalLink } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
-interface HeaderProps {
-  onOpenResume?: () => void;
-  soundEnabled?: boolean;
-  onToggleSound?: () => void;
-}
-
-export const Header: React.FC<HeaderProps> = () => {
+export const Header = () => {
   const [activeNav, setActiveNav] = useState('ABOUT');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showConfirmDownload, setShowConfirmDownload] = useState(false);
@@ -301,4 +295,3 @@ Generated from Portfolio: https://thachhien.dev
     </header>
   );
 };
-

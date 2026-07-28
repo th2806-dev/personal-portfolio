@@ -1,7 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
-export const FooterSection: React.FC = () => {
+export const FooterSection = () => {
   return (
     <footer className="pt-20 pb-8 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#262626]/50 relative overflow-hidden">
       {/* Background Watermark Text */}

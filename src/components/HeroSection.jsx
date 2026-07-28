@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { PERSONAL_INFO, STAT_METRICS } from '../data/portfolioData';
 import { Github, Mail, Globe, ArrowUpRight, Flame, Server, Database, Linkedin, Terminal, Copy, Check, ShieldCheck } from 'lucide-react';
 
-interface HeroSectionProps {
-  onSelectHighlight?: (topic: string) => void;
-}
-
-export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectHighlight }) => {
+export const HeroSection = ({ onSelectHighlight }) => {
   const [copied, setCopied] = useState(false);
   const dockerCommand = 'docker run -d -p 8080:8080 --name core-api thachhien/dotnet10-api:latest';
 
@@ -179,7 +175,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectHighlight }) =
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Orange Glow Card */}
             <div
-              onClick={() => onSelectHighlight?.('API & Architecture')}
+              onClick={() => onSelectHighlight && onSelectHighlight('API & Architecture')}
               className="bg-[#15161e] border border-[#2a2c3a] hover:border-[#f97316] rounded-xl p-5 flex flex-col justify-between min-h-[130px] cursor-pointer hover:shadow-[0_8px_25px_rgba(249,115,22,0.25)] hover:-translate-y-0.5 transition-all duration-300 group select-none relative overflow-hidden"
             >
               <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#f97316]/10 rounded-full blur-2xl pointer-events-none group-hover:bg-[#f97316]/25 transition-all"></div>
@@ -196,7 +192,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectHighlight }) =
 
             {/* Cyan/Emerald Glow Card */}
             <div
-              onClick={() => onSelectHighlight?.('.NET & Cloud Infrastructure')}
+              onClick={() => onSelectHighlight && onSelectHighlight('.NET & Cloud Infrastructure')}
               className="bg-[#15161e] border border-[#2a2c3a] hover:border-[#38bdf8] rounded-xl p-5 flex flex-col justify-between min-h-[130px] cursor-pointer hover:shadow-[0_8px_25px_rgba(56,189,248,0.25)] hover:-translate-y-0.5 transition-all duration-300 group select-none relative overflow-hidden"
             >
               <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#38bdf8]/10 rounded-full blur-2xl pointer-events-none group-hover:bg-[#38bdf8]/25 transition-all"></div>

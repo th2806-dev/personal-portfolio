@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Mail, Globe, User, Send, CheckCircle } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
-export const ContactSection: React.FC = () => {
+export const ContactSection = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 

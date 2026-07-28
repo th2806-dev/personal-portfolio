@@ -1,5 +1,3 @@
-import { Project, TechSkill, EducationInfo, StatMetric } from '../types';
-
 export const PERSONAL_INFO = {
   name: 'Thach Hien',
   title: 'SOFTWARE ENGINEER',
@@ -15,51 +13,42 @@ export const PERSONAL_INFO = {
   year: '2026',
 };
 
-export const STAT_METRICS: StatMetric[] = [
+export const STAT_METRICS = [
   { value: '3.9', label: 'GPA EXCELLENCE' },
   { value: '.NET', label: '10 SPECIALIZED' },
   { value: '05+', label: 'PORTFOLIO PROJECTS' },
 ];
 
-export const EDUCATION_DATA: EducationInfo = {
+export const EDUCATION_DATA = {
   school: 'HO CHI MINH CITY COLLEGE OF TRANSPORT',
   degree: 'Technology (Software Application)',
   period: '2024 — 2027',
   gpa: '3.9/4.0',
 };
 
-export const TECH_STACK_DATA: TechSkill[] = [
-  // Languages & Core
+export const TECH_STACK_DATA = [
   { name: '.NET 10 (C# 13)', category: 'languages', level: 'PRIMARY CORE', highlight: true },
   { name: 'JavaScript ES6+ / TypeScript', category: 'languages', level: 'ADVANCED', highlight: true },
   { name: 'HTML5 & CSS3 / Tailwind', category: 'languages', level: 'PROFICIENT' },
-
-  // Frameworks & Architecture
   { name: 'ASP.NET Core Web API', category: 'frameworks', level: 'PRIMARY CORE', highlight: true },
   { name: 'Entity Framework Core (EF Core)', category: 'frameworks', level: 'PRIMARY CORE', highlight: true },
   { name: 'ReactJS (Vite + Tailwind)', category: 'frameworks', level: 'ADVANCED', highlight: true },
   { name: '3-Tier Layered Architecture', category: 'other', level: 'PRIMARY PATTERN', highlight: true },
   { name: 'RESTful API Design & OpenApi', category: 'other', level: 'ADVANCED', highlight: true },
-
-  // Persistence & Caching
   { name: 'SQL Server (T-SQL & Indexing)', category: 'persistence', level: 'PRIMARY CORE', highlight: true },
   { name: 'Redis (Distributed Cache & Lock)', category: 'persistence', level: 'ADVANCED', highlight: true },
   { name: 'MongoDB (NoSQL Logs)', category: 'persistence', level: 'PROFICIENT' },
-
-  // Security & Patterns
   { name: 'JWT Authentication & Refresh Tokens', category: 'other', level: 'ADVANCED', highlight: true },
   { name: 'Role-Based Access Control (RBAC)', category: 'other', level: 'ADVANCED' },
   { name: 'Strategy & Factory OOP Patterns', category: 'other', level: 'ADVANCED' },
   { name: 'Hangfire Background Workers', category: 'other', level: 'PROFICIENT' },
-
-  // DevOps & Tools
   { name: 'Docker & Docker Compose', category: 'tools', level: 'ADVANCED', highlight: true },
   { name: 'Git & GitHub Workflow', category: 'tools', level: 'ADVANCED', highlight: true },
   { name: 'Postman & Swagger UI', category: 'tools', level: 'ADVANCED' },
   { name: 'Visual Studio 2022 / VS Code', category: 'tools', level: 'PROFICIENT' },
 ];
 
-export const PROJECTS_DATA: Project[] = [
+export const PROJECTS_DATA = [
   {
     id: 'movie-booking-ecosystem',
     number: '01',

@@ -1,22 +1,13 @@
 import React, { useState } from 'react';
-import { Project } from '../types';
 import { X, ExternalLink, Github, Database, Server, Cpu, Play, CheckCircle2, Terminal } from 'lucide-react';
 
-interface ProjectModalProps {
-  project: Project | null;
-  onClose: () => void;
-}
-
-export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+export const ProjectModal = ({ project, onClose }) => {
   if (!project) return null;
 
-  const [activeTab, setActiveTab] = useState<'overview' | 'architecture' | 'simulator'>('overview');
-  const [simState, setSimState] = useState<{ loading: boolean; output: string | null }>({
-    loading: false,
-    output: null,
-  });
+  const [activeTab, setActiveTab] = useState('overview');
+  const [simState, setSimState] = useState({ loading: false, output: null });
 
-  const runSimulation = (endpoint: string) => {
+  const runSimulation = (endpoint) => {
     setSimState({ loading: true, output: null });
     setTimeout(() => {
       let result = '';
@@ -107,9 +98,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <button
               onClick={() => setActiveTab('overview')}
               className={`px-4 py-2 font-mono text-xs rounded-lg transition-all cursor-pointer ${
-                activeTab === 'overview'
-                  ? 'bg-[#f97316] text-black font-bold'
-                  : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
+                activeTab === 'overview' ? 'bg-[#f97316] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
               }`}
             >
               OVERVIEW
@@ -117,9 +106,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <button
               onClick={() => setActiveTab('architecture')}
               className={`px-4 py-2 font-mono text-xs rounded-lg transition-all cursor-pointer ${
-                activeTab === 'architecture'
-                  ? 'bg-[#f97316] text-black font-bold'
-                  : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
+                activeTab === 'architecture' ? 'bg-[#f97316] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
               }`}
             >
               ARCHITECTURE SPECS
@@ -127,9 +114,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <button
               onClick={() => setActiveTab('simulator')}
               className={`px-4 py-2 font-mono text-xs rounded-lg transition-all cursor-pointer ${
-                activeTab === 'simulator'
-                  ? 'bg-[#f97316] text-black font-bold'
-                  : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
+                activeTab === 'simulator' ? 'bg-[#f97316] text-black font-bold' : 'bg-[#1b1b1b] text-[#c6c6c7] hover:text-white'
               }`}
             >
               API SIMULATOR

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { PROJECTS_DATA } from '../data/portfolioData';
-import { Project } from '../types';
 import { ProjectModal } from './ProjectModal';
 import { ArrowUpRight, Layers, Sparkles } from 'lucide-react';
 
-export const ProjectsSection: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+export const ProjectsSection = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section id="projects" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#262626]/50">

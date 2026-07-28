@@ -1,12 +1,7 @@
 import React from 'react';
 
-interface TechItem {
-  name: string;
-  icon: React.ReactNode;
-}
-
-export const TechStackSection: React.FC = () => {
-  const row1: TechItem[] = [
+export const TechStackSection = () => {
+  const row1 = [
     {
       name: '.NET',
       icon: (
@@ -54,7 +49,7 @@ export const TechStackSection: React.FC = () => {
     },
   ];
 
-  const row2: TechItem[] = [
+  const row2 = [
     {
       name: 'PostgreSQL',
       icon: (
@@ -94,7 +89,7 @@ export const TechStackSection: React.FC = () => {
     },
   ];
 
-  const row3: TechItem[] = [
+  const row3 = [
     {
       name: 'RabbitMQ',
       icon: (
@@ -121,7 +116,7 @@ export const TechStackSection: React.FC = () => {
     },
   ];
 
-  const renderCard = (tech: TechItem, idx: number) => (
+  const renderCard = (tech, idx) => (
     <div
       key={idx}
       className="group w-28 h-28 sm:w-[120px] sm:h-[120px] bg-[#1a1b22]/70 backdrop-blur-md border border-[#2d2e38] rounded-2xl sm:rounded-[22px] p-3 sm:p-4 flex flex-col items-center justify-center gap-2 sm:gap-3 cursor-pointer hover:border-[#525466] hover:bg-[#22242e] hover:shadow-[0_12px_32px_rgba(0,0,0,0.7)] hover:-translate-y-1 transition-all duration-300 select-none"
@@ -193,5 +188,3 @@ export const TechStackSection: React.FC = () => {
     </section>
   );
 };
-
-
