@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PROJECTS_DATA } from '../data/portfolioData';
-import { ProjectModal } from './ProjectModal';
 import { ArrowUpRight, Layers, Sparkles } from 'lucide-react';
 
 export const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section id="projects" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#262626]/50">
@@ -73,33 +71,44 @@ export const ProjectsSection = () => {
                 </div>
 
                   {/* Action Link */}
-                  <div className="pt-2">
-                    <button
-                      onClick={() => setSelectedProject(project)}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1b1b1b] border border-[#2a2a2a] hover:border-[var(--accent)] text-white font-mono text-xs font-bold rounded-xl hover:bg-[#222222] hover:shadow-[0_0_15px_rgba(var(--accent-rgba),0.2)] transition-all duration-200 cursor-pointer group active:scale-95"
+                  <div className="pt-2 flex items-center gap-3">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#1b1b1b] border border-[#2a2a2a] hover:border-[var(--accent)] text-white font-mono text-xs font-bold rounded-xl hover:bg-[#222222] hover:shadow-[0_0_15px_rgba(var(--accent-rgba),0.15)] transition-all duration-200"
                     >
-                      <span>INSPECT ARCHITECTURE & DEMO</span>
-                      <ArrowUpRight size={16} style={{ color: 'var(--accent)' }} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
-                    </button>
+                      <span>View on GitHub</span>
+                      <ArrowUpRight size={16} style={{ color: 'var(--accent)' }} className="ml-1" />
+                    </a>
+                    {project.demoUrl ? (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--accent)] text-black font-mono text-xs font-bold rounded-xl hover:opacity-95 transition-all duration-200"
+                      >
+                        Live Demo
+                      </a>
+                    ) : null}
                   </div>
                 </div>
 
                 {/* Image Side */}
-                <div
-                  className={`lg:col-span-6 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
-                  onClick={() => setSelectedProject(project)}
-                >
+                <div className={`lg:col-span-6 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="w-full aspect-[16/10] bg-[#121212] border border-[#262626] rounded-2xl overflow-hidden relative group cursor-pointer hover:border-[var(--accent)] transition-all duration-300 shadow-xl hover:shadow-2xl">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </a>
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <span className="px-4 py-2.5 bg-black/80 backdrop-blur-md font-mono text-xs font-bold rounded-xl flex items-center gap-2 shadow-2xl group-hover:scale-105 transition-transform" style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}>
                         <Layers size={16} />
-                        Inspect Architecture & Specs
+                        View Project
                       </span>
                     </div>
                   </div>
@@ -108,12 +117,6 @@ export const ProjectsSection = () => {
             );
           })}
         </div>
-
-      {/* Detail Inspector Modal */}
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
     </section>
   );
 };

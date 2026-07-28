@@ -5,8 +5,6 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 export const Header = () => {
   const [activeNav, setActiveNav] = useState('ABOUT');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showConfirmDownload, setShowConfirmDownload] = useState(false);
-  const [downloadSuccess, setDownloadSuccess] = useState(false);
 
   const navItems = [
     { label: 'ABOUT', href: '#about' },
@@ -15,59 +13,7 @@ export const Header = () => {
     { label: 'CONTACT', href: '#contact' },
   ];
 
-  const cvFileName = 'Thach_Hien_Software_Engineer_CV.txt';
-
-  const generateCVText = () => {
-    return `====================================================
-THACH HIEN - SOFTWARE ENGINEER
-====================================================
-Email: ${PERSONAL_INFO.email}
-GitHub: ${PERSONAL_INFO.github}
-LinkedIn: ${PERSONAL_INFO.linkedin}
-Location: ${PERSONAL_INFO.location}
-
-ABOUT ME:
-${PERSONAL_INFO.subtitle}
-
-SUMMARY / KEY COMPETENCIES:
-- .NET 10 (C# 13) & ASP.NET Core Web API
-- Entity Framework Core (EF Core) & SQL Server
-- ReactJS, TypeScript & Tailwind CSS
-- Redis Distributed Caching & Lock Architecture
-- Hangfire Async Background Job Queue
-- Docker & Docker Compose Container Deployment
-- 3-Tier Layered Architecture Pattern
-
-EDUCATION:
-College of Transport (2024 - 2027) - GPA: 3.9 / 4.0
-
-SELECTED PROJECTS:
-1. MOVIE BOOKING ECOSYSTEM (.NET 10, EF Core, SQL Server, Redis, Docker, ReactJS)
-2. ENTERPRISE LOGISTICS HUB (.NET 10, Redis, MongoDB, Hangfire, ReactJS)
-
-====================================================
-Generated from Portfolio: https://thachhien.dev
-====================================================`;
-  };
-
-  const handleExecuteDownload = () => {
-    const content = generateCVText();
-    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = cvFileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-
-    setDownloadSuccess(true);
-    setTimeout(() => {
-      setDownloadSuccess(false);
-      setShowConfirmDownload(false);
-    }, 2000);
-  };
+  const cvFileName = 'Thach_Hien_CV.pdf';
 
   return (
     <header className="sticky top-3 sm:top-4 z-50 px-2.5 sm:px-6 max-w-7xl mx-auto">
@@ -182,14 +128,16 @@ Generated from Portfolio: https://thachhien.dev
             <Linkedin size={15} />
           </a>
 
-          {/* 3D Elevated Pill Button (`DOWNLOAD CV`) */}
-          <button
-            onClick={() => setShowConfirmDownload(true)}
-            className="group flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-[var(--accent)] via-[#ea580c] to-[#a855f7] border border-white/30 text-white font-sans font-bold text-[11px] sm:text-xs rounded-full shadow-[0_6px_25px_rgba(var(--accent-rgba),0.55),inset_0_1px_2px_rgba(255,255,255,0.6)] hover:shadow-[0_8px_32px_rgba(var(--accent-rgba),0.85)] hover:scale-[1.04] active:scale-95 transition-all duration-200 cursor-pointer"
+          {/* 3D Elevated Pill Button (`DOWNLOAD CV`) - direct PDF download served from /public */}
+          <a
+            href="/Thach_Hien_CV.pdf"
+            download
+            className="group inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-[var(--accent)] via-[#ea580c] to-[#a855f7] border border-white/30 text-white font-sans font-bold text-[11px] sm:text-xs rounded-full shadow-[0_6px_25px_rgba(var(--accent-rgba),0.55),inset_0_1px_2px_rgba(255,255,255,0.6)] hover:shadow-[0_8px_32px_rgba(var(--accent-rgba),0.85)] hover:scale-[1.04] active:scale-95 transition-all duration-200"
+            rel="noopener noreferrer"
           >
             <span className="whitespace-nowrap">DOWNLOAD CV</span>
             <Download size={13} className="group-hover:translate-y-0.5 group-hover:scale-110 transition-transform duration-200" />
-          </button>
+          </a>
 
           {/* Mobile Grid Icon Button (Shows on all screens below lg:) */}
           <button
@@ -202,71 +150,7 @@ Generated from Portfolio: https://thachhien.dev
         </div>
       </div>
 
-      {/* Confirmation Modal / Prompt for CV Download */}
-      {showConfirmDownload && (
-        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-[#14151d] border border-[#2a2c3a] rounded-3xl p-5 sm:p-6 max-w-md w-full shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-200">
-            <div className="flex items-center justify-between pb-3 border-b border-[#252736]">
-              <div className="flex items-center gap-2 text-white font-display font-bold text-base sm:text-lg">
-                <FileText className="text-[var(--accent)]" size={20} />
-                <span>Xác nhận tải xuống CV</span>
-              </div>
-              <button
-                onClick={() => setShowConfirmDownload(false)}
-                className="p-1 rounded-full text-[#8e90a0] hover:text-white hover:bg-[#252736]"
-              >
-                <X size={18} />
-              </button>
-            </div>
-
-            <div className="space-y-3 font-sans text-xs sm:text-sm text-[#a2a4b8]">
-              <p>
-                Bạn có chắc chắn muốn tải xuống hồ sơ năng lực (CV) của <strong className="text-white">Thạch Hiển - Software Engineer</strong> không?
-              </p>
-
-              {/* File details card */}
-              <div className="bg-[#0d0e14] border border-[#252736] rounded-xl p-3.5 flex items-center justify-between font-mono text-xs text-[#c4c6d8]">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-[var(--accent)]/10 text-[var(--accent)]">
-                    <Download size={16} />
-                  </div>
-                  <div>
-                    <div className="text-white font-bold">{cvFileName}</div>
-                    <div className="text-[10px] text-[#717388]">Format: Full Plain Text Resume</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Direct download status message */}
-            {downloadSuccess ? (
-              <div
-                style={{ background: 'rgba(var(--accent-rgba),0.10)', border: '1px solid rgba(var(--accent-rgba),0.30)', color: 'var(--accent)' }}
-                className="p-3 rounded-xl font-mono text-xs flex items-center gap-2 justify-center"
-              >
-                <Check size={16} />
-                <span>Đã bắt đầu tải xuống thành công!</span>
-              </div>
-            ) : (
-              <div className="flex items-center gap-3 pt-2">
-                <button
-                  onClick={() => setShowConfirmDownload(false)}
-                  className="flex-1 py-2.5 px-4 rounded-full border border-[#2e3040] text-[#9a9cb0] font-mono text-xs font-bold hover:text-white hover:bg-[#1e202d] transition-all cursor-pointer"
-                >
-                  Hủy
-                </button>
-                <button
-                  onClick={handleExecuteDownload}
-                  className="flex-1 py-2.5 px-4 rounded-full bg-gradient-to-r from-[var(--accent)] to-[#ea580c] text-white font-mono text-xs font-bold hover:shadow-[0_0_15px_rgba(var(--accent-rgba),0.4)] active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <Download size={14} />
-                  <span>Tải xuống ngay</span>
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+      {/* Confirmation modal removed — using static PDF in /public for downloads */}
 
       {/* Mobile Dropdown Navigation with Smooth Glassmorphic Entrance Animation */}
       {mobileMenuOpen && (

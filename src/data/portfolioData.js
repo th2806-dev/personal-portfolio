@@ -1,14 +1,15 @@
 export const PERSONAL_INFO = {
-  name: 'Thach Hien',
+  name: 'THACH HIEN',
   title: 'SOFTWARE ENGINEER',
-  subtitle: 'Passionate Full-Stack .NET Developer specializing in building high-performance web applications and structured web services. Highly skilled in .NET 10, ASP.NET Core, and ReactJS. Seeking an Intern Full-Stack position.',
-  cardBio: 'Software Engineer who loves building scalable and reliable backend systems.',
-  email: 'thachhien.dev@gmail.com',
-  github: 'https://github.com/thachhien',
-  linkedin: 'https://linkedin.com/in/thachhien',
-  portfolioUrl: 'https://thachhien.dev',
-  location: 'HCM City, Vietnam',
-  availability: 'Available for Remote Work',
+  subtitle: 'Passionate Full-Stack .NET Developer specializing in building high-performance web applications and structured web services. Highly skilled in .NET 10, ASP.NET Core, and ReactJS. Seeking an Intern Full-Stack position to contribute to scalable digital business solutions.',
+  cardBio: 'Passionate Full-Stack .NET Developer focusing on backend systems and scalable web services.',
+  email: 'th.2806.dev@gmail.com',
+  phone: '0906891704',
+  github: 'https://github.com/th2806-dev',
+  linkedin: 'https://www.linkedin.com/in/thachhien',
+  portfolioUrl: 'https://thachhiendev.vercel.app',
+  location: 'HCMCT',
+  availability: 'Available for Internship / Remote Work',
   status: 'SYSTEMS INITIALIZED',
   year: '2026',
 };
@@ -72,8 +73,8 @@ export const PROJECTS_DATA = [
       ],
       databaseDesign: 'SQL Server relational model normalized to 3NF with index tuning for high-traffic movie showtimes.'
     },
-    demoUrl: 'https://movie-booking-demo.example.com',
-    githubUrl: 'https://github.com/thachhien/movie-booking-ecosystem'
+    demoUrl: '',
+    githubUrl: 'https://github.com/th2806-dev/movie-booking-system'
   },
   {
     id: 'enterprise-logistics-hub',
@@ -98,7 +99,7 @@ export const PROJECTS_DATA = [
       ],
       databaseDesign: 'SQL Server for transactional order tracking, MongoDB for high-ingestion IoT fleet telemetry logs.'
     },
-    demoUrl: 'https://logistics-hub-demo.example.com',
-    githubUrl: 'https://github.com/thachhien/enterprise-logistics-hub'
+    demoUrl: '',
+    githubUrl: 'https://github.com/th2806-dev/enterprise-logistics-system'
   }
 ];
