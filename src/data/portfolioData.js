@@ -49,57 +49,123 @@ export const TECH_STACK_DATA = [
   { name: 'Visual Studio 2022 / VS Code', category: 'tools', level: 'PROFICIENT' },
 ];
 
+// export const PROJECTS_DATA = [
+//   {
+//     id: 'movie-booking-ecosystem',
+//     number: '01',
+//     title: 'MOVIE BOOKING ECOSYSTEM',
+//     categoryTags: 'FULL-STACK / .NET 10 / MONOREPO',
+//     description: 'Designed and structured a production-ready Movie Booking API using a 3-Tier Layered Architecture to achieve strict separation of concerns. Implemented secure JWT authentication and Role-Based Access Control (RBAC). Optimized for high-concurrency seat selection and containerized using Docker.',
+//     keyStack: ['.NET 10', 'ASP.NET CORE', 'EF CORE', 'SQL SERVER', 'REACTJS', 'DOCKER'],
+//     image: '/images/movie_booking_demo_1785175602739.jpg',
+//     architectureDetails: {
+//       pattern: '3-Tier Layered Monorepo Architecture (Presentation, Business Logic, Data Access)',
+//       highlights: [
+//         'Optimized concurrent seat reservation with distributed Redis locking to prevent double-booking',
+//         'JWT + Refresh Token authentication with granular Role-Based Access Control (RBAC)',
+//         'EF Core query optimization reducing API response latency by 65%',
+//         'Containerized multi-service deployment with Docker Compose'
+//       ],
+//       apiEndpoints: [
+//         'POST /api/v1/auth/login - JWT issuance',
+//         'GET /api/v1/movies/showtimes - Cached showtimes querying',
+//         'POST /api/v1/bookings/reserve-seats - Redis atomic seat lock'
+//       ],
+//       databaseDesign: 'SQL Server relational model normalized to 3NF with index tuning for high-traffic movie showtimes.'
+//     },
+//     demoUrl: '',
+//     githubUrl: 'https://github.com/th2806-dev/movie-booking-system'
+//   },
+//   {
+//     id: 'enterprise-logistics-hub',
+//     number: '02',
+//     title: 'ENTERPRISE LOGISTICS HUB',
+//     categoryTags: 'CORE BACKEND / SYSTEM DESIGN',
+//     description: 'High-performance distribution ecosystem designed for high-concurrency big data. Integrated Redis for master data lookup, accelerating response times up to 50x. Leveraged Strategy/Factory patterns and Hangfire for async jobs. Polyglot persistence using SQL Server and MongoDB.',
+//     keyStack: ['.NET 10', 'REDIS', 'MONGODB', 'HANGFIRE', 'PATTERNS', 'REACT'],
+//     image: '/images/logistics_hub_demo_1785175618427.jpg',
+//     architectureDetails: {
+//       pattern: 'Polyglot Persistence with Async Job Queue & Event Pipeline',
+//       highlights: [
+//         'Master data in-memory lookup via Redis cluster yielding 50x speedup for routing queries',
+//         'Hangfire background worker processing 10,000+ telemetry waypoints concurrently',
+//         'Strategy & Factory OOP design patterns for modular shipping rate calculation engines',
+//         'Hybrid SQL Server (relational transactions) & MongoDB (unstructured telemetry logs) persistence'
+//       ],
+//       apiEndpoints: [
+//         'POST /api/v1/logistics/calculate-route - Strategy pattern routing',
+//         'GET /api/v1/telemetry/live-tracking - Hybrid polyglot data fetch',
+//         'POST /api/v1/jobs/sync-inventory - Hangfire scheduled worker trigger'
+//       ],
+//       databaseDesign: 'SQL Server for transactional order tracking, MongoDB for high-ingestion IoT fleet telemetry logs.'
+//     },
+//     demoUrl: '',
+//     githubUrl: 'https://github.com/th2806-dev/enterprise-logistics-system'
+//   }
+// ];
+
 export const PROJECTS_DATA = [
   {
-    id: 'movie-booking-ecosystem',
+    id: 'hp-detailing',
     number: '01',
-    title: 'MOVIE BOOKING ECOSYSTEM',
-    categoryTags: 'FULL-STACK / .NET 10 / MONOREPO',
-    description: 'Designed and structured a production-ready Movie Booking API using a 3-Tier Layered Architecture to achieve strict separation of concerns. Implemented secure JWT authentication and Role-Based Access Control (RBAC). Optimized for high-concurrency seat selection and containerized using Docker.',
-    keyStack: ['.NET 10', 'ASP.NET CORE', 'EF CORE', 'SQL SERVER', 'REACTJS', 'DOCKER'],
-    image: '/images/movie_booking_demo_1785175602739.jpg',
+    title: 'HP AUTO DETAILING',
+    categoryTags: 'FULL-STACK / ASP.NET CORE / MVC',
+    description:
+      'Production-ready auto detailing management system built with ASP.NET Core MVC. Implemented role-based workflows, inventory management, service tickets, appointments, invoicing, and real-time notifications with SignalR.',
+    keyStack: [
+      'ASP.NET CORE 8',
+      'EF CORE',
+      'SQL SERVER',
+      'IDENTITY',
+      'SIGNALR',
+      'TAILWIND CSS',
+    ],
+    image: '/images/hp_detailing_demo.jpg',
     architectureDetails: {
-      pattern: '3-Tier Layered Monorepo Architecture (Presentation, Business Logic, Data Access)',
+      pattern: 'ASP.NET Core MVC with Layered Architecture',
       highlights: [
-        'Optimized concurrent seat reservation with distributed Redis locking to prevent double-booking',
-        'JWT + Refresh Token authentication with granular Role-Based Access Control (RBAC)',
-        'EF Core query optimization reducing API response latency by 65%',
-        'Containerized multi-service deployment with Docker Compose'
+        'Role-Based Access Control for Admin, Receptionist, Technician, Warehouse, and Foreman',
+        'Inventory, service ticket, appointment, invoice, and payment workflows',
+        'Real-time notifications and status updates using SignalR',
+        'Automated database migration and seed data initialization',
       ],
-      apiEndpoints: [
-        'POST /api/v1/auth/login - JWT issuance',
-        'GET /api/v1/movies/showtimes - Cached showtimes querying',
-        'POST /api/v1/bookings/reserve-seats - Redis atomic seat lock'
-      ],
-      databaseDesign: 'SQL Server relational model normalized to 3NF with index tuning for high-traffic movie showtimes.'
+      apiEndpoints: [],
+      databaseDesign:
+        'SQL Server relational database designed with Entity Framework Core for transactional business workflows.',
     },
     demoUrl: '',
-    githubUrl: 'https://github.com/th2806-dev/movie-booking-system'
+    githubUrl: 'https://github.com/thachhien-github/HP_Detailing.git',
   },
+
   {
-    id: 'enterprise-logistics-hub',
+    id: 'internlink',
     number: '02',
-    title: 'ENTERPRISE LOGISTICS HUB',
-    categoryTags: 'CORE BACKEND / SYSTEM DESIGN',
-    description: 'High-performance distribution ecosystem designed for high-concurrency big data. Integrated Redis for master data lookup, accelerating response times up to 50x. Leveraged Strategy/Factory patterns and Hangfire for async jobs. Polyglot persistence using SQL Server and MongoDB.',
-    keyStack: ['.NET 10', 'REDIS', 'MONGODB', 'HANGFIRE', 'PATTERNS', 'REACT'],
-    image: '/images/logistics_hub_demo_1785175618427.jpg',
+    title: 'INTERNLINK',
+    categoryTags: 'FULL-STACK / .NET / REACT',
+    description:
+      'Internship management platform connecting students, mentors, and organizations. Designed to centralize internship tracking, company management, evaluations, analytics, notifications, and core business workflows.',
+    keyStack: [
+      '.NET',
+      'ASP.NET CORE',
+      'REACT',
+      'SQL SERVER',
+      'REST API',
+      'CLEAN ARCHITECTURE',
+    ],
+    image: '/images/internlink_demo.jpg',
     architectureDetails: {
-      pattern: 'Polyglot Persistence with Async Job Queue & Event Pipeline',
+      pattern: 'Clean Architecture with RESTful API',
       highlights: [
-        'Master data in-memory lookup via Redis cluster yielding 50x speedup for routing queries',
-        'Hangfire background worker processing 10,000+ telemetry waypoints concurrently',
-        'Strategy & Factory OOP design patterns for modular shipping rate calculation engines',
-        'Hybrid SQL Server (relational transactions) & MongoDB (unstructured telemetry logs) persistence'
+        'Student, internship, company, evaluation, and grading management',
+        'RESTful APIs supporting core business workflows and data handling',
+        'Dashboard, analytics, notifications, and account management modules',
+        'Modular system design focused on maintainability and scalability',
       ],
-      apiEndpoints: [
-        'POST /api/v1/logistics/calculate-route - Strategy pattern routing',
-        'GET /api/v1/telemetry/live-tracking - Hybrid polyglot data fetch',
-        'POST /api/v1/jobs/sync-inventory - Hangfire scheduled worker trigger'
-      ],
-      databaseDesign: 'SQL Server for transactional order tracking, MongoDB for high-ingestion IoT fleet telemetry logs.'
+      apiEndpoints: [],
+      databaseDesign:
+        'SQL Server relational database supporting structured internship management workflows.',
     },
     demoUrl: '',
-    githubUrl: 'https://github.com/th2806-dev/enterprise-logistics-system'
-  }
+    githubUrl: 'https://github.com/thachhien-github/InternLink.git',
+  },
 ];
