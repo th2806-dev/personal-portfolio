@@ -120,7 +120,7 @@ export const PROJECTS_DATA = [
       'SIGNALR',
       'TAILWIND CSS',
     ],
-    image: '/images/hp_detailing_demo.jpg',
+    image: '/images/movie_booking_demo_1785175602739.jpg',
     architectureDetails: {
       pattern: 'ASP.NET Core MVC with Layered Architecture',
       highlights: [
@@ -152,7 +152,7 @@ export const PROJECTS_DATA = [
       'REST API',
       'CLEAN ARCHITECTURE',
     ],
-    image: '/images/internlink_demo.jpg',
+    image: '/images/logistics_hub_demo_1785175618427.jpg',
     architectureDetails: {
       pattern: 'Clean Architecture with RESTful API',
       highlights: [
