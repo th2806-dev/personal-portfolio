@@ -97,7 +97,7 @@ export const HeroSection = ({ onSelectHighlight }) => {
 
             <div className="mb-4 space-y-0">
               <h1 className="font-hero font-extrabold text-3xl sm:text-5xl lg:text-[60px] xl:text-[68px] tracking-[-0.01em] text-[#f3f4f6] leading-[0.92] uppercase select-none">
-                SOFTWARE
+                SOFTWARE & Infrastructure
               </h1>
               <h1 className="font-hero font-extrabold text-3xl sm:text-5xl lg:text-[60px] xl:text-[68px] tracking-[-0.01em] text-[#404350] leading-[0.92] uppercase select-none">
                 ENGINEER
