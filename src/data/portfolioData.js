@@ -1,8 +1,8 @@
 export const PERSONAL_INFO = {
   name: 'THACH HIEN',
   title: 'SOFTWARE ENGINEER',
-  subtitle: 'Passionate Full-Stack .NET Developer specializing in building high-performance web applications and structured web services. Highly skilled in .NET 10, ASP.NET Core, and ReactJS. Seeking an Intern Full-Stack position to contribute to scalable digital business solutions.',
-  cardBio: 'Passionate Full-Stack .NET Developer focusing on backend systems and scalable web services.',
+  subtitle: 'Information Technology student with a strong foundation in Software Development and Computer Systems. Quick learner with basic knowledge of Linux CLI, Windows administration, and networking setup. Seeking an IT Support / Infrastructure Intern position to gain hands-on experience and prepare for a future DevOps career path.',
+  cardBio: 'IT student with a foundation in software development, computer systems, Linux, Windows administration, and networking.',
   email: 'th.2806.dev@gmail.com',
   phone: '0906891704',
   github: 'https://github.com/th2806-dev',
