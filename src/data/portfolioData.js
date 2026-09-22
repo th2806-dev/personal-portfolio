@@ -106,8 +106,40 @@ export const TECH_STACK_DATA = [
 
 export const PROJECTS_DATA = [
   {
-    id: 'hp-detailing',
+    id: 'internlink',
     number: '01',
+    title: 'INTERNLINK',
+    categoryTags: 'FULL-STACK / .NET / REACT',
+    description:
+      'Internship management platform connecting students, mentors, and organizations. Designed to centralize internship tracking, company management, evaluations, analytics, notifications, and core business workflows.',
+    keyStack: [
+      '.NET',
+      'ASP.NET CORE',
+      'REACT',
+      'SQL SERVER',
+      'REST API',
+      'CLEAN ARCHITECTURE',
+    ],
+    image: '/images/logistics_hub_demo_1785175618427.jpg',
+    architectureDetails: {
+      pattern: 'Clean Architecture with RESTful API',
+      highlights: [
+        'Student, internship, company, evaluation, and grading management',
+        'RESTful APIs supporting core business workflows and data handling',
+        'Dashboard, analytics, notifications, and account management modules',
+        'Modular system design focused on maintainability and scalability',
+      ],
+      apiEndpoints: [],
+      databaseDesign:
+        'SQL Server relational database supporting structured internship management workflows.',
+    },
+    demoUrl: '',
+    githubUrl: 'https://github.com/th2806-dev/internlink.git',
+  },
+
+  {
+    id: 'hp-detailing',
+    number: '02',
     title: 'HP AUTO DETAILING',
     categoryTags: 'FULL-STACK / ASP.NET CORE / MVC',
     description:
@@ -137,35 +169,4 @@ export const PROJECTS_DATA = [
     githubUrl: 'https://github.com/thachhien-github/HP_Detailing.git',
   },
 
-  {
-    id: 'internlink',
-    number: '02',
-    title: 'INTERNLINK',
-    categoryTags: 'FULL-STACK / .NET / REACT',
-    description:
-      'Internship management platform connecting students, mentors, and organizations. Designed to centralize internship tracking, company management, evaluations, analytics, notifications, and core business workflows.',
-    keyStack: [
-      '.NET',
-      'ASP.NET CORE',
-      'REACT',
-      'SQL SERVER',
-      'REST API',
-      'CLEAN ARCHITECTURE',
-    ],
-    image: '/images/logistics_hub_demo_1785175618427.jpg',
-    architectureDetails: {
-      pattern: 'Clean Architecture with RESTful API',
-      highlights: [
-        'Student, internship, company, evaluation, and grading management',
-        'RESTful APIs supporting core business workflows and data handling',
-        'Dashboard, analytics, notifications, and account management modules',
-        'Modular system design focused on maintainability and scalability',
-      ],
-      apiEndpoints: [],
-      databaseDesign:
-        'SQL Server relational database supporting structured internship management workflows.',
-    },
-    demoUrl: '',
-    githubUrl: 'https://github.com/thachhien-github/InternLink.git',
-  },
 ];
