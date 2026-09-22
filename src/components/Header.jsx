@@ -19,7 +19,7 @@ export const Header = () => {
     <header className="sticky top-3 sm:top-4 z-50 px-2.5 sm:px-6 max-w-7xl mx-auto">
       {/* Outer Floating Header Container (Responsive Glassmorphism & Shadow) */}
       <div className="relative bg-[#0f1018]/95 backdrop-blur-2xl border-t border-white/15 border-x border-b border-[#232536] rounded-full px-3.5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.95),0_0_30px_rgba(var(--accent-rgba),0.08),inset_0_1px_1px_rgba(255,255,255,0.1)] overflow-hidden transition-all duration-300">
-        
+
         {/* Left Side: Dual-Layer 3D Glowing S-Curve Partition (Scales smoothly with screen width) */}
         <div className="absolute left-0 top-0 h-full w-[180px] min-[420px]:w-[240px] sm:w-[300px] md:w-[360px] pointer-events-none overflow-hidden transition-all duration-300">
           <svg className="w-full h-full" viewBox="0 0 360 60" preserveAspectRatio="none">
@@ -66,7 +66,7 @@ export const Header = () => {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#fb923c] via-[#ea580c] to-[#7c3aed] border border-white/30 flex items-center justify-center text-white font-mono font-black text-xs sm:text-sm shadow-[0_4px_18px_rgba(var(--accent-rgba),0.55),inset_0_1px_2px_rgba(255,255,255,0.7)] group-hover:scale-105 group-hover:shadow-[0_0_25px_rgba(var(--accent-rgba),0.85)] group-hover:border-white/60 transition-all duration-300">
               TH
             </div>
-            
+
             {/* Title & Subtitle */}
             <div className="flex flex-col">
               <span className="font-display font-black text-xs min-[420px]:text-sm sm:text-base tracking-tight text-white group-hover:text-[var(--accent)] transition-colors leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
@@ -89,14 +89,13 @@ export const Header = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setActiveNav(item.label)}
-                className={`relative px-3.5 lg:px-4 py-1.5 rounded-full font-sans text-xs font-semibold transition-all duration-200 ${
-                    isActive
+                className={`relative px-3.5 lg:px-4 py-1.5 rounded-full font-sans text-xs font-semibold transition-all duration-200 ${isActive
                     ? 'text-white font-bold bg-gradient-to-r from-[var(--accent)]/30 to-[#a855f7]/30 border border-[var(--accent)]/50 shadow-[0_2px_12px_rgba(var(--accent-rgba),0.35),inset_0_1px_1px_rgba(255,255,255,0.25)] scale-100'
                     : 'text-[#9496a8] hover:text-[var(--accent)] hover:bg-[var(--accent)]/10 hover:shadow-[0_0_15px_rgba(var(--accent-rgba),0.2)] hover:scale-105 active:scale-95'
-                }`}
+                  }`}
               >
                 {titleCaseLabel}
-                  {isActive && (
+                {isActive && (
                   <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-[var(--accent)] rounded-full shadow-[0_0_10px_var(--accent)]"></span>
                 )}
               </a>
@@ -130,7 +129,7 @@ export const Header = () => {
 
           {/* 3D Elevated Pill Button (`DOWNLOAD CV`) - direct PDF download served from /public */}
           <a
-            href="/CV_ThachHien_IT_Intern.pdf"
+            href="/THACH-HIEN-CV-intern.pdf"
             download
             className="group inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-[var(--accent)] via-[#ea580c] to-[#a855f7] border border-white/30 text-white font-sans font-bold text-[11px] sm:text-xs rounded-full shadow-[0_6px_25px_rgba(var(--accent-rgba),0.55),inset_0_1px_2px_rgba(255,255,255,0.6)] hover:shadow-[0_8px_32px_rgba(var(--accent-rgba),0.85)] hover:scale-[1.04] active:scale-95 transition-all duration-200"
             rel="noopener noreferrer"
@@ -166,11 +165,10 @@ export const Header = () => {
                   setActiveNav(item.label);
                   setMobileMenuOpen(false);
                 }}
-                className={`px-4 py-2.5 rounded-xl font-bold flex items-center justify-between transition-all duration-200 ${
-                  isActive
+                className={`px-4 py-2.5 rounded-xl font-bold flex items-center justify-between transition-all duration-200 ${isActive
                     ? 'bg-gradient-to-r from-[var(--accent)]/25 to-[#a855f7]/25 text-[var(--accent)] border border-[var(--accent)]/40'
                     : 'text-[#9496a8] hover:text-white hover:bg-white/5'
-                }`}
+                  }`}
               >
                 <span>{titleCaseLabel}</span>
                 {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)]"></span>}

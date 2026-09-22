@@ -97,7 +97,7 @@ export const HeroSection = ({ onSelectHighlight }) => {
 
             <div className="mb-4 space-y-0">
               <h1 className="font-hero font-extrabold text-3xl sm:text-5xl lg:text-[60px] xl:text-[68px] tracking-[-0.01em] text-[#f3f4f6] leading-[0.92] uppercase select-none">
-                SOFTWARE & Infrastructure
+                SOFTWARE
               </h1>
               <h1 className="font-hero font-extrabold text-3xl sm:text-5xl lg:text-[60px] xl:text-[68px] tracking-[-0.01em] text-[#404350] leading-[0.92] uppercase select-none">
                 ENGINEER
@@ -106,7 +106,7 @@ export const HeroSection = ({ onSelectHighlight }) => {
 
             <p className="text-[#c6c6c7] font-sans text-base sm:text-lg max-w-3xl leading-relaxed mb-4">
               {PERSONAL_INFO.subtitle}
-            </p>           
+            </p>
           </div>
 
           {/* 3 Metric Stat Blocks */}
@@ -133,14 +133,14 @@ export const HeroSection = ({ onSelectHighlight }) => {
               onClick={() => onSelectHighlight && onSelectHighlight('API & Architecture')}
               className="bg-[#15161e] border border-[#2a2c3a] hover:border-[var(--accent)] rounded-xl p-5 flex flex-col justify-between min-h-[130px] cursor-pointer hover:shadow-[0_8px_25px_rgba(var(--accent-rgba),0.25)] hover:-translate-y-0.5 transition-all duration-300 group select-none relative overflow-hidden"
             >
-                <div className="absolute -top-12 -right-12 w-28 h-28 bg-[var(--accent)]/10 rounded-full blur-2xl pointer-events-none group-hover:bg-[var(--accent)]/25 transition-all"></div>
+              <div className="absolute -top-12 -right-12 w-28 h-28 bg-[var(--accent)]/10 rounded-full blur-2xl pointer-events-none group-hover:bg-[var(--accent)]/25 transition-all"></div>
               <div className="flex items-center justify-between relative z-10">
-                  <div className="p-2.5 rounded-lg bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/20">
+                <div className="p-2.5 rounded-lg bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/20">
                   <Server size={20} />
                 </div>
-                  <ArrowUpRight size={20} className="text-[#8e90a0] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                <ArrowUpRight size={20} className="text-[#8e90a0] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
               </div>
-                <div className="relative z-10 font-display font-bold text-base sm:text-lg leading-snug uppercase tracking-tight text-white group-hover:text-[var(--accent)] transition-colors mt-3">
+              <div className="relative z-10 font-display font-bold text-base sm:text-lg leading-snug uppercase tracking-tight text-white group-hover:text-[var(--accent)] transition-colors mt-3">
                 SCALABLE API,<br />SYSTEM ARCHITECTURE
               </div>
             </div>
