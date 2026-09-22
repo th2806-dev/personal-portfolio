@@ -21,7 +21,7 @@ export const HeroSection = ({ onSelectHighlight }) => {
             {/* Image Container */}
             <div className="w-full aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5] min-h-[24rem] bg-[#1b1b1b] border border-[#2a2a2a] rounded-xl overflow-hidden mb-5 relative group/img">
               <img
-                src="/images/profile_avatar_1785175586090.jpg"
+                src="/images/profile_avatar_178517558609.jpg"
                 alt="Thach Hien Developer"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
